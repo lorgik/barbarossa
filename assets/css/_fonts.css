@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Font";
-  src: url("../fonts/BergenSans/BergenSans-Bold.woff") format("truetype");
+  src: url("./../fonts/BergenSans/BergenSans-Bold.woff") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "Font";
-  src: url("../fonts/BergenSans/BergenSans-SemiBold.woff") format("truetype");
+  src: url("./../fonts/BergenSans/BergenSans-SemiBold.woff") format("truetype");
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Font";
-  src: url("../fonts/BergenSans/BergenSans.woff") format("truetype");
+  src: url("./../fonts/BergenSans/BergenSans.woff") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
