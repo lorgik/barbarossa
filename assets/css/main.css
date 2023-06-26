@@ -289,6 +289,7 @@ li {
 }
 
 .gallery-title {
+  margin-top: 9px;
   max-width: 685px;
 }
 
@@ -326,9 +327,21 @@ li {
 }
 
 .progress-bar {
+  position: relative;
   width: 294px;
   height: 2px;
   background-color: #e8e8e8;
+}
+
+.progress-bar--fill {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: var(--color-main-orange);
+
+  transition: width 0.35s ease-in-out;
 }
 
 .gallery-slider {
@@ -344,7 +357,7 @@ li {
 .gallery-slide {
   border-radius: 40px;
 
-  transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.35s ease-in-out;
 }
 
 .gallery-shadow {
