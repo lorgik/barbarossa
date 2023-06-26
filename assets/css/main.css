@@ -335,6 +335,8 @@ li {
   gap: 24px;
   top: 231px;
   left: 56%;
+
+  overflow: hidden;
 }
 
 .gallery-slide {
