@@ -19,6 +19,8 @@ body {
   font-weight: 400;
   line-height: 1.25;
   color: var(--color-main-white);
+
+  overflow-x: hidden;
 }
 
 a,
@@ -341,6 +343,8 @@ li {
 
 .gallery-slide {
   border-radius: 40px;
+
+  transition: margin-left 0.3s ease-in-out;
 }
 
 .gallery-shadow {
