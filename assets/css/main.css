@@ -3,6 +3,7 @@
 :root {
   font-size: 16px;
   --color-main-black: #2c2c2c;
+  --color-secondary-black: #494949;
   --color-main-white: #ffffff;
   --color-main-orange: #f26210;
 }
@@ -16,6 +17,7 @@
 body {
   font-family: "Font";
   font-weight: 400;
+  line-height: 1.25;
   color: var(--color-main-white);
 }
 
@@ -23,6 +25,10 @@ a,
 a:hover {
   text-decoration: none;
   color: var(--color-main-white);
+}
+
+p {
+  margin: 0;
 }
 
 button {
@@ -38,6 +44,26 @@ li {
 .button {
   background-color: var(--color-main-orange);
   color: var(--color-main-white);
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-main-white);
+
+  background-color: var(--color-main-orange);
+
+  border-radius: 25px;
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+
+  transform: rotate(-1deg);
 }
 
 .main-bg {
@@ -117,27 +143,13 @@ li {
 }
 
 .main-subtitle {
-  display: inline-block;
   padding: 13.5px 30px;
-
-  font-weight: 700;
-  font-size: 1.25rem;
-  background-color: var(--color-main-orange);
-
-  border-radius: 25px;
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
-
-  transform: rotate(-1deg);
 }
 
 .main-title {
   margin-top: 21px;
 
   max-width: 845px;
-
-  font-size: 3.25rem;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .main__button-box {
@@ -172,4 +184,173 @@ li {
 
 .video-link {
   position: absolute;
+}
+
+.gallery {
+  position: relative;
+  margin-top: 272px;
+  color: var(--color-secondary-black);
+  background-color: var(--color-main-white);
+  height: 648px;
+  border-radius: 100px 100px 0 0;
+}
+
+.statistics {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: -127px;
+  height: 230px;
+  border-radius: 40px;
+  border: 1px solid #777;
+  color: var(--color-main-white);
+  background: url("../images/statistics-bg.jpg") var(--color-main-black);
+}
+
+.statistics::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 229px;
+  border-radius: 40px;
+  background-image: url("../images/statistics-shadow.png");
+}
+
+.statistics-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+
+  max-width: 427px;
+  width: 100%;
+  height: 230px;
+}
+
+.statistics-card::before {
+  z-index: 2;
+  position: absolute;
+  content: "";
+
+  right: -1px;
+
+  width: 1px;
+  height: 150px;
+  background: #777;
+}
+
+.statistics-card:last-of-type::before {
+  display: none;
+}
+
+.statistics-card__title {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5625rem;
+  font-weight: 700;
+}
+
+.statistics-card__text {
+  position: relative;
+  z-index: 1;
+  font-size: 1.25rem;
+  max-width: 177px;
+}
+
+.statistics-card::after {
+  z-index: 0;
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 1px;
+  width: 238px;
+  height: 229px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.statistics-card--man::after {
+  background-image: url("../images/man-bg.png");
+}
+
+.statistics-card--scissors::after {
+  background-image: url("../images/scissors-bg.png");
+}
+
+.statistics-card--armchair::after {
+  background-image: url("../images/armchair-bg.png");
+}
+
+.gallery-title {
+  max-width: 685px;
+}
+
+.gallery-subtitle {
+  padding: 13px 18px;
+}
+
+.gallery-text {
+  margin-top: 46px;
+  max-width: 636px;
+
+  font-size: 1.25rem;
+  color: var(--color-secondary-black);
+}
+
+.gallery-arrows {
+  margin-top: 57px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.arrow-left {
+  background-image: url("../images/arrow-left-disabled.svg");
+}
+
+.arrow-right {
+  background-image: url("../images/arrow-right.svg");
+}
+
+.progress-bar {
+  width: 294px;
+  height: 2px;
+  background-color: #e8e8e8;
+}
+
+.gallery-slider {
+  position: absolute;
+  display: flex;
+  gap: 24px;
+  top: 231px;
+  left: 56%;
+}
+
+.gallery-slide {
+  border-radius: 40px;
+}
+
+.gallery-shadow {
+  position: absolute;
+  top: 103px;
+  right: 0;
+  width: 288px;
+  height: 622px;
+
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+}
+
+.cosmetics {
+  margin-top: 178px;
 }
