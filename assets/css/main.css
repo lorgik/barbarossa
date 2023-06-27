@@ -499,7 +499,13 @@ img {
   left: 0;
   right: 0;
 
-  object-fit: cover;
+  width: 1842px;
+  height: 2406px;
+
+  background-image: url("../images/youtube-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .youtube-box {
@@ -596,4 +602,82 @@ img {
   background-image: url("../images/triangle.svg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.articles {
+  margin-top: 100px;
+}
+
+.articles-box {
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.arcticles-card {
+  position: relative;
+  height: 330px;
+  max-width: 361px;
+  width: 100%;
+
+  padding: 0 40px 0 30px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.arcticles-card::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: 0px 0px 20px 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+
+  width: 100%;
+  height: 120px;
+}
+
+.arcticles-card.big-card {
+  max-width: 526px;
+}
+
+.articles-card__image {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+}
+
+.articles-card__date {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 13px 18px;
+  border-radius: 25px;
+  background: var(--color-main-orange);
+
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.articles-card__title {
+  margin-top: 165px;
+  margin-bottom: 0;
+
+  font-size: 1.3125rem;
+  font-weight: 700;
+}
+
+.articles-card__text {
+  margin-top: 10px;
+
+  font-size: 1.0625rem;
 }
