@@ -499,7 +499,7 @@ img {
   left: 0;
   right: 0;
 
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .youtube-box {
@@ -540,12 +540,11 @@ img {
   height: 234px;
   border-radius: 20px;
   background-color: #9f9f9f;
-
   overflow: hidden;
 }
 
 .youtube-video__tooltip {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -560,10 +559,13 @@ img {
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(4px);
+  opacity: 0;
+
+  transition: opacity 0.25s ease-in-out;
 }
 
 .youtube-video:hover .youtube-video__tooltip {
-  display: flex;
+  opacity: 1;
 }
 
 .youtube-video__title {
