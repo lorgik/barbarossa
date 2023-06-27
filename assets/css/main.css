@@ -58,6 +58,7 @@ img {
   font-size: 3.25rem;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -377,7 +378,6 @@ img {
 
 .cosmetics {
   margin-top: 178px;
-  margin-bottom: 178px;
 
   color: var(--color-secondary-black);
 }
@@ -412,6 +412,7 @@ img {
 
 .cosmetics__card-image {
   margin: 2px auto 0;
+  object-fit: contain;
 }
 
 .cosmetics__card-title {
@@ -482,4 +483,115 @@ img {
 
 .cosmetics__slider-arrow {
   margin: 0 auto;
+}
+
+.youtube {
+  padding-top: 152px;
+  margin-top: 97px;
+  position: relative;
+}
+
+.youtube-bg {
+  z-index: -1;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  object-fit: contain;
+}
+
+.youtube-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.youtube-title {
+  position: relative;
+  display: inline-block;
+}
+
+.youtube-subtitle {
+  position: absolute;
+  top: 45px;
+  right: -10px;
+  padding: 13px 29px;
+  text-transform: none;
+}
+
+.youtube-button {
+  padding: 27px 36px;
+  border-radius: 15px;
+}
+
+.youtube-videos {
+  margin-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.youtube-video {
+  position: relative;
+  width: 100%;
+  height: 234px;
+  border-radius: 20px;
+  background-color: #9f9f9f;
+
+  overflow: hidden;
+}
+
+.youtube-video__tooltip {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.youtube-video:hover .youtube-video__tooltip {
+  display: flex;
+}
+
+.youtube-video__title {
+  max-width: 360px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.youtube-video__link {
+  padding-right: 19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-main-orange);
+}
+
+.youtube-video__link::before {
+  position: absolute;
+  content: "";
+
+  width: 10px;
+  height: 11px;
+  right: 0;
+
+  background-image: url("../images/triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
