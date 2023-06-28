@@ -342,13 +342,23 @@ img {
   width: 50px;
   height: 50px;
   cursor: pointer;
+
+  transition: background-image 0.2s ease-in-out;
 }
 
 .arrow-left {
   background-image: url("../images/arrow-left-disabled.svg");
 }
 
+.arrow-left:hover {
+  background-image: url("../images/arrow-left.svg");
+}
+
 .arrow-right {
+  background-image: url("../images/arrow-right-disabled.svg");
+}
+
+.arrow-right:hover {
   background-image: url("../images/arrow-right.svg");
 }
 
@@ -951,6 +961,8 @@ img {
 
 .footer-privacy__link {
   color: #9f9f9f;
+
+  transition: color 0.2s ease-in-out;
 }
 
 .footer-copyright {
