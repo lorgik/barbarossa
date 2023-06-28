@@ -410,6 +410,11 @@ img {
   margin-top: 178px;
 
   color: var(--color-secondary-black);
+
+  overflow: hidden;
+}
+
+.cosmetics .container {
 }
 
 .cosmetics__slider-container,
@@ -541,9 +546,40 @@ img {
 }
 
 .youtube-box {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.youtube-box::before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  top: -195px;
+  right: 80px;
+
+  width: 84px;
+  height: 84px;
+  background-image: url("../images/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  animation: jump 3s ease-in-out infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: -195px;
+  }
+
+  50% {
+    top: -215px;
+  }
+
+  100% {
+    top: -195px;
+  }
 }
 
 .youtube-title {
