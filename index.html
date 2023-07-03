@@ -9,8 +9,12 @@
   </head>
   <body>
     <div class="wrapper">
-      <img class="main-bg" src="./assets/images/main-bg.jpg" alt="bgImage" />
-      <header class="header">
+      <img
+        class="main-bg lock-padding"
+        src="./assets/images/main-bg.jpg"
+        alt="bgImage"
+      />
+      <header id="header" class="header">
         <div class="container">
           <a class="header-log__link" href="/">
             <img
@@ -24,7 +28,9 @@
           <nav class="header-menu">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--choose" href="#"
+                <a
+                  class="menu__list-link menu__list-link--choose popup-link"
+                  href="#popup"
                   >Выбери свой барбершоп</a
                 >
               </li>
@@ -60,7 +66,9 @@
             Запишись в свой барбершоп со скидкой 20%*
           </h1>
           <div class="main__button-box">
-            <button class="main-button button">Выбрать барбершоп</button>
+            <a class="main-button button popup-link" href="#popup"
+              >Выбрать барбершоп</a
+            >
             <span class="main__button-decription">
               * акция действует на первое посещение
             </span>
@@ -126,42 +134,34 @@
         <div class="gallery-shadow"></div>
         <div class="gallery-slider__container">
           <div id="gallery-slider" class="gallery-slider">
-            <img
-              class="gallery-slide"
-              src="./assets/images/gallery/gallery-image-1.jpg"
-              alt="barbershop"
-              width="416"
-              height="416"
-            />
-            <img
-              class="gallery-slide"
-              src="./assets/images/gallery/gallery-image-2.jpg"
-              alt="barbershop"
-              width="416"
-              height="416"
-            />
-            <img
-              class="gallery-slide"
-              src="./assets/images/gallery/gallery-image-3.jpg"
-              alt="barbershop"
-              width="416"
-              height="416"
-            />
-            <!-- <img
-              class="gallery-slide"
-              src="./assets/images/gallery/gallery-image-2.jpg"
-              alt="barbershop"
-              width="416"
-              height="416"
-            />
-            <img
-              class="gallery-slide"
-              src="./assets/images/gallery/gallery-image-2.jpg"
-              alt="barbershop"
-              width="416"
-              height="416"
-            />
-          </div> -->
+            <a class="gallery-link popup-link" href="#popup__gallery">
+              <img
+                class="gallery-slide"
+                src="./assets/images/gallery/gallery-image-1.jpg"
+                alt="barbershop"
+                width="416"
+                height="416"
+              />
+            </a>
+            <a class="gallery-link popup-link" href="#popup__gallery">
+              <img
+                class="gallery-slide"
+                src="./assets/images/gallery/gallery-image-2.jpg"
+                alt="barbershop"
+                width="416"
+                height="416"
+              />
+            </a>
+            <a class="gallery-link popup-link" href="#popup__gallery">
+              <img
+                class="gallery-slide"
+                src="./assets/images/gallery/gallery-image-3.jpg"
+                alt="barbershop"
+                width="416"
+                height="416"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -171,104 +171,101 @@
         </div>
         <div class="cosmetics__slider-container">
           <div class="cosmetics__slider-arrow arrow-left arrow"></div>
-          <div class="container">
-            <div class="cosmetics-slider">
-              <div class="cosmetics__card">
-                <img
-                  class="cosmetics__card-image"
-                  src="./assets/images/cosmetics/image-1.png"
-                  alt="product"
-                  width="192"
-                  height="263"
-                />
-                <h3 class="cosmetics__card-title">Бальзам для волос</h3>
-                <p class="cosmetics__card-desc">В наличии</p>
-                <div class="cosmetics__card-prices">
-                  <span class="cosmetics__card-price">1 215 ₽</span>
-                  <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button"
-                    >В корзину</a
-                  >
-                </div>
+
+          <div class="cosmetics-slider">
+            <div class="cosmetics__card">
+              <img
+                class="cosmetics__card-image"
+                src="./assets/images/cosmetics/image-1.png"
+                alt="product"
+                width="192"
+                height="263"
+              />
+              <h3 class="cosmetics__card-title">Бальзам для волос</h3>
+              <p class="cosmetics__card-desc">В наличии</p>
+              <div class="cosmetics__card-prices">
+                <span class="cosmetics__card-price">1 215 ₽</span>
+                <span class="cosmetics__card-oldprice">1 500 ₽</span>
+                <a href="#" class="cosmetics__card-button button">В корзину</a>
               </div>
-              <div class="cosmetics__card">
-                <img
-                  class="cosmetics__card-image"
-                  src="./assets/images/cosmetics/image-2.png"
-                  alt="product"
-                  width="192"
-                  height="263"
-                />
-                <h3 class="cosmetics__card-title">Бальзам для волос</h3>
-                <p class="cosmetics__card-desc">В наличии</p>
-                <div class="cosmetics__card-prices">
-                  <span class="cosmetics__card-price">1 215 ₽</span>
-                  <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button">
-                    В корзину
-                  </a>
-                </div>
+            </div>
+            <div class="cosmetics__card">
+              <img
+                class="cosmetics__card-image"
+                src="./assets/images/cosmetics/image-2.png"
+                alt="product"
+                width="192"
+                height="263"
+              />
+              <h3 class="cosmetics__card-title">Бальзам для волос</h3>
+              <p class="cosmetics__card-desc">В наличии</p>
+              <div class="cosmetics__card-prices">
+                <span class="cosmetics__card-price">1 215 ₽</span>
+                <span class="cosmetics__card-oldprice">1 500 ₽</span>
+                <a href="#" class="cosmetics__card-button button">
+                  В корзину
+                </a>
               </div>
-              <div class="cosmetics__card">
-                <img
-                  class="cosmetics__card-image"
-                  src="./assets/images/cosmetics/image-3.png"
-                  alt="product"
-                  width="192"
-                  height="263"
-                />
-                <h3 class="cosmetics__card-title">Бальзам для волос</h3>
-                <p class="cosmetics__card-desc">В наличии</p>
-                <div class="cosmetics__card-prices">
-                  <span class="cosmetics__card-price">1 215 ₽</span>
-                  <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button">
-                    В корзину
-                  </a>
-                </div>
+            </div>
+            <div class="cosmetics__card">
+              <img
+                class="cosmetics__card-image"
+                src="./assets/images/cosmetics/image-3.png"
+                alt="product"
+                width="192"
+                height="263"
+              />
+              <h3 class="cosmetics__card-title">Бальзам для волос</h3>
+              <p class="cosmetics__card-desc">В наличии</p>
+              <div class="cosmetics__card-prices">
+                <span class="cosmetics__card-price">1 215 ₽</span>
+                <span class="cosmetics__card-oldprice">1 500 ₽</span>
+                <a href="#" class="cosmetics__card-button button">
+                  В корзину
+                </a>
               </div>
-              <div class="cosmetics__card">
-                <img
-                  class="cosmetics__card-image"
-                  src="./assets/images/cosmetics/image-4.png"
-                  alt="product"
-                  width="192"
-                  height="263"
-                />
-                <h3 class="cosmetics__card-title">Бальзам для волос</h3>
-                <p class="cosmetics__card-desc">В наличии</p>
-                <div class="cosmetics__card-prices">
-                  <span class="cosmetics__card-price">1 215 ₽</span>
-                  <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button">
-                    В корзину
-                  </a>
-                </div>
+            </div>
+            <div class="cosmetics__card">
+              <img
+                class="cosmetics__card-image"
+                src="./assets/images/cosmetics/image-4.png"
+                alt="product"
+                width="192"
+                height="263"
+              />
+              <h3 class="cosmetics__card-title">Бальзам для волос</h3>
+              <p class="cosmetics__card-desc">В наличии</p>
+              <div class="cosmetics__card-prices">
+                <span class="cosmetics__card-price">1 215 ₽</span>
+                <span class="cosmetics__card-oldprice">1 500 ₽</span>
+                <a href="#" class="cosmetics__card-button button">
+                  В корзину
+                </a>
               </div>
-              <div class="cosmetics__card">
-                <img
-                  class="cosmetics__card-image"
-                  src="./assets/images/cosmetics/image-1.png"
-                  alt="product"
-                  width="192"
-                  height="263"
-                />
-                <h3 class="cosmetics__card-title">Бальзам для волос</h3>
-                <p class="cosmetics__card-desc">В наличии</p>
-                <div class="cosmetics__card-prices">
-                  <span class="cosmetics__card-price">1 215 ₽</span>
-                  <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button">
-                    В корзину
-                  </a>
-                </div>
+            </div>
+            <div class="cosmetics__card">
+              <img
+                class="cosmetics__card-image"
+                src="./assets/images/cosmetics/image-1.png"
+                alt="product"
+                width="192"
+                height="263"
+              />
+              <h3 class="cosmetics__card-title">Бальзам для волос</h3>
+              <p class="cosmetics__card-desc">В наличии</p>
+              <div class="cosmetics__card-prices">
+                <span class="cosmetics__card-price">1 215 ₽</span>
+                <span class="cosmetics__card-oldprice">1 500 ₽</span>
+                <a href="#" class="cosmetics__card-button button">
+                  В корзину
+                </a>
               </div>
             </div>
           </div>
+
           <div class="cosmetics__slider-arrow arrow-right arrow"></div>
         </div>
       </section>
-
       <div class="youtube-bg">
         <section class="youtube">
           <div class="container">
@@ -673,6 +670,29 @@
         </div>
       </div>
     </footer>
+    <div id="popup" class="popup">
+      <div class="container col-12">
+        <div class="popup__barbershop">
+          <h2 class="popup__barbershop-title title">Выбери барбершоп</h2>
+        </div>
+      </div>
+      <a class="popup__close close-popup" href="#header"></a>
+    </div>
+    <div id="popup__gallery" class="popup">
+      <div class="container col-12">
+        <div class="popup__gallery">
+          <img
+            class="gallery-image"
+            src="./assets/images/gallery/gallery-image-1.jpg"
+            alt="barbershop"
+            width="416"
+            height="416"
+          />
+        </div>
+      </div>
+      <a class="popup__close close-popup" href="#header"></a>
+    </div>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
