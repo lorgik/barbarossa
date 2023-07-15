@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты барбершопа BarbarossA</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/contacts.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <img class="main-bg lock-padding" src="./assets/images/articles/articles-bg.jpg" alt="bgImage" />
+      <header id="header" class="header">
+        <div class="container">
+          <a class="header-log__link" href="/">
+            <img class="header-logo" src="./assets/images/logo.png" alt="BarbarossA" width="129" height="108" />
+          </a>
+          <nav class="header-menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link menu__list-link--choose popup-link" href="#popup"> Выбери свой барбершоп </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="./index.html#about">О нас</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="./articles.html">Статьи</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link menu__list-link--academy" href="#">Академия</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Франшиза</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Одежда</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="content">
+        <main class="main">
+          <div class="container main-container">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><span aria-current="contacts">Контакты</span></li>
+              </ul>
+            </nav>
+            <div class="contacts-top">
+              <h1 class="contacts-title title">Контакты</h1>
+              <a href="#" class="contacts-button button">Все барбершопы</a>
+              <div class="contacts-top__links">
+                <a class="links-button links-button--whatsapp button" href="#"> WhatsApp </a>
+                <a class="links-button links-button--youtube button" href="#"> YouTube </a>
+                <a class="links-button links-button--vkontakte button" href="#"> ВКонтакте </a>
+              </div>
+            </div>
+            <div class="contacts-map">
+              <div class="contacts-box">
+                <h3 class="contacts-box__title">Мы на связи</h3>
+                <a href="#" class="contacts-box__phone">+7 977 898-30-18</a>
+                <a href="#" class="contacts-box__mail">tuaev@barbarossa.top</a>
+                <span class="contacts-box__location"><b>121059, Москва,</b> Бережковская наб., 20 ст. 30</span>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-top">
+            <a class="footer-logo__link" href="/">
+              <img class="footer-logo" src="./assets/images/logo.png" alt="BarbarossA" width="152" height="127" />
+            </a>
+            <nav class="footer-menu">
+              <ul class="footer-menu__list">
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#">Главная</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#">Статьи</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#">Академия</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a class="footer-menu__link" href="#">Франшиза</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer-links">
+              <div class="footer-links__box">
+                <a class="footer-links__phone" href="#">
+                  +7 977 898-30-18
+                  <span class="footer-links__phone--subtitle"> Заказать обратный звонок </span>
+                </a>
+                <a class="footer-links__mail" href="#">tuaev@barbarossa.top</a>
+              </div>
+              <div class="footer-links__box footer-links__box--socials">
+                <a class="links-button links-button--whatsapp button" href="#"> WhatsApp </a>
+                <a class="links-button links-button--youtube button" href="#"> YouTube </a>
+                <a class="links-button links-button--vkontakte button" href="#"> ВКонтакте </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-privacy">
+            <a class="footer-privacy__link" href="#"> Политика конфиденциальности </a>
+            <a class="footer-privacy__link" href="#"> Пользовательское соглашение </a>
+            <a class="footer-privacy__link" href="#">Публичная оферта</a>
+          </div>
+          <div class="footer-copyright">
+            <span class="footer-copyright__text"> © 2019 — 2023 Cеть барбершопов BarbarossA </span>
+            <span class="footer-copyright__text"> ООО БАРБАРОССА ИНН: 026910665709, ОГРНИП: 320028000012351 </span>
+          </div>
+        </div>
+      </footer>
+
+      <a href="#" class="booking-icon" style="background-image: url(./assets/images/booking-icon.jpg)"></a>
+
+      <div id="popup" class="popup" style="display: none">
+        <div class="container col-12">
+          <div class="popup__barbershop popup__content">
+            <h2 class="popup__barbershop-title title">Выбери барбершоп</h2>
+          </div>
+        </div>
+        <a class="popup__close close-popup" href="#header"></a>
+      </div>
+    </div>
+    <script src="./assets/js/contacts.js"></script>
+  </body>
+</html>

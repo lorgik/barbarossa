@@ -1,119 +1,112 @@
-// const slides = document.querySelectorAll(".gallery-slide");
-// const arrowLeft = document.querySelector("#arrow-left");
-// const arrowRight = document.querySelector("#arrow-right");
+const slides = document.querySelectorAll(".gallery-link");
+const arrowLeft = document.querySelector("#arrow-left");
+const arrowRight = document.querySelector("#arrow-right");
 
-// const progressBar = document.querySelector("#progress-bar");
-// const progressBarFill = document.querySelector("#progress-bar--fill");
+const slider = Array.from(slides);
 
-// progressBarFill.style.width = progressBar.offsetWidth / slides.length + "px";
+const progressBar = document.querySelector("#progress-bar");
+const progressBarFill = document.querySelector("#progress-bar--fill");
 
-// const slider = [];
+const initialBar = progressBar.offsetWidth / slider.length;
 
-// for (let i = 0; i < slides.length; i++) {
-//   slider[i] = [slides[i].src, slides[i].alt];
-//   slides[i].remove();
-// }
+const slideWidth = slider[0].offsetWidth;
+const sliderGap = 24;
+const scrollDisctance = slideWidth + sliderGap;
+let currentMarginLeft = 0;
+let scrolls = 0;
 
-// const slideWidth = 416;
-// const slideGap = 24;
+drawBar();
 
-// let step = 0;
-// let offset = 0;
-// let currentSlide = 0;
+function scrollLeft(e) {
+  e.preventDefault();
 
-// // let step2 = 1;
-// // let offset2 = 0;
+  if (scrolls !== 0) {
+    slider[0].style.marginLeft = currentMarginLeft + scrollDisctance + "px";
+    currentMarginLeft += scrollDisctance;
+    scrolls--;
+    drawBar();
+  } else {
+    currentMarginLeft = -scrollDisctance * (slider.length - 1);
+    slider[0].style.marginLeft = currentMarginLeft + "px";
+    scrolls = slider.length - 1;
+    drawBar();
+  }
+}
 
-// // function draw() {
-// //   const img = document.createElement("img");
-// //   img.src = slider[step2][0];
-// //   img.alt = slider[step2][1];
-// //   img.width = slideWidth;
-// //   img.height = slideWidth;
-// //   img.classList.add("gallery-slide");
-// //   img.style.left =
-// //     offset2 * slideWidth - slideWidth + slideGap * offset2 - slideGap + "px";
+function scrollRight(e) {
+  e.preventDefault();
 
-// //   document.querySelector("#gallery-slider").appendChild(img);
+  if (scrolls < slider.length - 1) {
+    slider[0].style.marginLeft = currentMarginLeft - scrollDisctance + "px";
+    currentMarginLeft -= scrollDisctance;
+    scrolls++;
+    progressBarFill.style.width = progressBar.offsetWidth / slider.length;
+    drawBar();
+  } else {
+    currentMarginLeft = 0;
+    slider[0].style.marginLeft = currentMarginLeft;
+    scrolls = 0;
+    drawBar();
+  }
+}
 
-// //   if (step2 === 1) {
-// //     step2 = 0;
-// //   } else {
-// //     step2--;
-// //   }
+function drawBar() {
+  progressBarFill.style.width = (scrolls + 1) * initialBar + "px";
+}
 
-// //   if (offset2 === 3) {
-// //     offset2 = 0;
-// //   } else {
-// //     offset2--;
-// //   }
-// //   console.log(offset2);
-// // }
+arrowLeft.addEventListener("click", scrollLeft);
+arrowRight.addEventListener("click", scrollRight);
 
-// function draw() {
-//   const img = document.createElement("img");
-//   img.src = slider[step][0];
-//   img.alt = slider[step][1];
-//   img.width = slideWidth;
-//   img.height = slideWidth;
-//   img.classList.add("gallery-slide");
-//   img.style.left = offset * slideWidth + slideGap * offset + "px";
+const popupImage = document.querySelector(".gallery-image");
+const popupArrowLeft = document.querySelector("#popup-arrow__left");
+const popupArrowRight = document.querySelector("#popup-arrow__right");
 
-//   document.querySelector("#gallery-slider").appendChild(img);
+const sliderSrc = [];
+let imageIndex = 0;
 
-//   if (step === slider.length - 1) {
-//     step = 0;
-//   } else {
-//     step++;
-//   }
+slider.forEach((slide, index) => {
+  slide.addEventListener("click", function () {
+    popupImage.src = slide.children[0].getAttribute("src");
+    imageIndex = index;
+  });
+  sliderSrc.push(slide.children[0].getAttribute("src"));
+});
 
-//   offset = 1;
-// }
+popupArrowLeft.addEventListener("click", scrollImageLeft);
+popupArrowRight.addEventListener("click", scrollImageRight);
 
-// // function left() {
-// //   arrowLeft.removeEventListener("click", left);
+function scrollImageLeft(e) {
+  e.preventDefault();
 
-// //   const slides2 = document.querySelectorAll(".gallery-slide");
-// //   console.log(slides2);
-// //   let offset2 = 0;
-// //   for (let i = 0; i < slides2.length; i++) {
-// //     slides2[i].style.left = (offset2 + 1) * (slideWidth + slideGap) + "px";
-// //     offset2++;
-// //   }
+  if (imageIndex > 0) {
+    popupImage.src = sliderSrc[imageIndex - 1];
+    imageIndex--;
+  } else {
+    popupImage.src = sliderSrc[sliderSrc.length - 1];
+    imageIndex = sliderSrc.length - 1;
+  }
+}
 
-// //   setTimeout(() => {
-// //     slides2[slides2.length - 1].remove();
-// //     draw();
-// //     arrowRight.addEventListener("click", left);
-// //   }, 300);
-// // }
+function scrollImageRight(e) {
+  e.preventDefault();
 
-// function right() {
-//   arrowRight.removeEventListener("click", right);
-
-//   const slides2 = document.querySelectorAll(".gallery-slide");
-//   let offset2 = 0;
-//   for (let i = 0; i < slides2.length; i++) {
-//     slides2[i].style.left = slideWidth * (offset2 - 1) + "px";
-//     offset2++;
-//   }
-
-//   setTimeout(() => {
-//     slides2[0].remove();
-//     draw();
-//     arrowRight.addEventListener("click", right);
-//   }, 300);
-// }
-
-// draw();
-// draw();
-
-// // arrowLeft.addEventListener("click", left);
-// arrowRight.addEventListener("click", right);
+  if (imageIndex < sliderSrc.length - 1) {
+    popupImage.src = sliderSrc[imageIndex + 1];
+    imageIndex++;
+  } else {
+    popupImage.src = sliderSrc[0];
+    imageIndex = 0;
+  }
+}
 
 const popupLinks = document.querySelectorAll(".popup-link");
 const body = document.querySelector("body");
 const lockPadding = document.querySelectorAll(".lock-padding");
+
+const popups = document.querySelectorAll(".popup");
+popups.forEach((popup) => {
+  popup.style.removeProperty("display");
+});
 
 let unlock = true;
 
@@ -152,7 +145,7 @@ function popupOpen(currentPopup) {
     }
     currentPopup.classList.add("open");
     currentPopup.addEventListener("click", function (e) {
-      if (!e.target.closest(".popup__barbershop")) {
+      if (!e.target.closest(".popup__content")) {
         popupClose(e.target.closest(".popup"));
       }
     });
@@ -169,8 +162,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-  const lockPaddingValue =
-    window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+  const lockPaddingValue = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
 
   if (lockPadding.length > 0) {
     for (let i = 0; i < lockPadding.length; i++) {
@@ -205,4 +197,109 @@ document.addEventListener("keydown", function (e) {
     const popupActive = document.querySelector(".popup.open");
     popupClose(popupActive);
   }
+});
+
+// const cosmeticsSliderWrapper = document.querySelector(".cosmetics__slider-container");
+// const cosmeticsSlider = document.querySelector(".cosmetics-slider");
+// const cosmeticsArrowLeft = document.querySelector(".cosmetics__slider-arrow.arrow-left");
+// const cosmeticsArrowRight = document.querySelector(".cosmetics__slider-arrow.arrow-right");
+// const firstCardWidth = cosmeticsSlider.querySelector(".cosmetics__card").offsetWidth;
+// const cosmeticsSlides = [...cosmeticsSlider.children];
+
+// let isDragging = false,
+//   startX,
+//   startScrollLeft,
+//   timeoutId;
+
+// let cardPerView = Math.round(cosmeticsSlider.offsetWidth / firstCardWidth);
+
+// cosmeticsSlides
+//   .slice(-cardPerView)
+//   .reverse()
+//   .forEach((card) => {
+//     cosmeticsSlider.insertAdjacentHTML("afterbegin", card.outerHTML);
+//   });
+
+// cosmeticsSlides.slice(0, cardPerView).forEach((card) => {
+//   cosmeticsSlider.insertAdjacentHTML("beforeend", card.outerHTML);
+// });
+
+// cosmeticsSlider.classList.add("no-transition");
+// cosmeticsSlider.scrollLeft = cosmeticsSlider.offsetWidth;
+// cosmeticsSlider.classList.remove("no-transition");
+
+// cosmeticsArrowLeft.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   cosmeticsSlider.scrollLeft += -firstCardWidth;
+// });
+// cosmeticsArrowRight.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   cosmeticsSlider.scrollLeft += firstCardWidth;
+// });
+
+// const dragStart = (e) => {
+//   isDragging = true;
+//   cosmeticsSlider.classList.add("dragging");
+//   startX = e.pageX;
+//   startScrollLeft = cosmeticsSlider.scrollLeft;
+// };
+
+// const dragging = (e) => {
+//   if (!isDragging) return;
+//   cosmeticsSlider.scrollLeft = startScrollLeft - (e.pageX - startX);
+// };
+
+// const dragStop = (e) => {
+//   isDragging = false;
+//   cosmeticsSlider.classList.remove("dragging");
+// };
+
+// const autoPlay = () => {
+//   if (window.innerWidth < 800) return;
+//   timeoutId = setTimeout(() => {
+//     console.log("tick");
+//     return (cosmeticsSlider.scrollLeft += firstCardWidth);
+//   }, 2500);
+// };
+
+// autoPlay();
+
+// const infiniteScroll = (e) => {
+//   if (cosmeticsSlider.scrollLeft < firstCardWidth) {
+//     cosmeticsSlider.classList.add("no-transition");
+//     cosmeticsSlider.scrollLeft = cosmeticsSlider.scrollWidth - 2 * cosmeticsSlider.offsetWidth;
+//     cosmeticsSlider.classList.remove("no-transition");
+//   } else if (Math.ceil(cosmeticsSlider.scrollLeft) === cosmeticsSlider.scrollWidth - cosmeticsSlider.offsetWidth) {
+//     cosmeticsSlider.classList.add("no-transition");
+//     cosmeticsSlider.scrollLeft = cosmeticsSlider.offsetWidth;
+//     cosmeticsSlider.classList.remove("no-transition");
+//   }
+
+//   clearTimeout(timeoutId);
+//   if (cosmeticsSliderWrapper.matches(":hover")) autoPlay();
+// };
+
+// cosmeticsSlider.addEventListener("mousedown", dragStart);
+// cosmeticsSlider.addEventListener("mousemove", dragging);
+// document.addEventListener("mouseup", dragStop);
+// cosmeticsSlider.addEventListener("scroll", infiniteScroll);
+// cosmeticsSliderWrapper.addEventListener("mouseenter", () =>
+//   clearTimeout(timeoutId)
+// );
+// cosmeticsSlider.addEventListener("mouseleave", autoPlay);
+
+$(document).ready(function () {
+  $(".cosmetics-slider").slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 4,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+  });
 });
