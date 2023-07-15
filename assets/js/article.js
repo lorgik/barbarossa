@@ -2,6 +2,11 @@ const popupLinks = document.querySelectorAll(".popup-link");
 const body = document.querySelector("body");
 const lockPadding = document.querySelectorAll(".lock-padding");
 
+const popups = document.querySelectorAll(".popup");
+popups.forEach((popup) => {
+  popup.style.removeProperty("display");
+});
+
 let unlock = true;
 
 const timeout = 300;

@@ -119,15 +119,11 @@ img {
   justify-content: space-between;
 }
 
-.header-menu {
-  max-width: 809px;
-  width: 100%;
-}
-
 .menu__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: 45px;
 }
 
 .menu__list-item {
