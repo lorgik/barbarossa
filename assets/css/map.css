@@ -1,0 +1,21 @@
+:root {
+  font-size: 16px;
+  --color-main-black: #2c2c2c;
+  --color-secondary-black: #494949;
+  --color-main-white: #ffffff;
+  --color-main-orange: #f26210;
+  --color-secondary-orange: #ce4e06;
+  --color-main-green: #10cb39;
+}
+
+.ymaps-2-1-79-balloon__layout {
+  border-radius: 10px;
+}
+
+.ymaps-2-1-79-balloon__layout .ballon-custem {
+  background-color: var(--color-main-orange);
+  color: var(--color-main-white);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  padding: 18px 51px;
+}

@@ -473,9 +473,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.cosmetics__slider-container {
   width: 100%;
 }
 
@@ -828,15 +825,11 @@ img {
   margin-top: 100px;
 }
 
-.news__slider-container {
-  margin-top: 45px;
-}
-
 .news-slider {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  min-width: 0;
 }
 
 .news-card {
@@ -1188,6 +1181,11 @@ img {
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+}
+
+.booking-icon:hover {
+  transform: scale(1.05);
 }
 
 .gallery-image {
@@ -1199,6 +1197,9 @@ img {
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
+}
+
+.cosmetics-slider .slick-list {
   margin-left: -24px;
   margin-right: -24px;
   padding-top: 45px;
@@ -1206,27 +1207,44 @@ img {
   padding-left: 24px;
   padding-right: 24px;
 }
+
+.news-slider .slick-list {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
 /* Лента слайдов */
 .slick-track {
   display: flex;
   align-items: flex-start;
 }
+
+.news-slider .slick-slide {
+  margin: 0 12px;
+}
+
 /* Слайд */
 .cosmetics-slider .slick-slide {
   margin: 0 12px;
   transition: box-shadow 0.2s ease-in-out;
 }
+
 /* Слайд активный (показывается) */
 .cosmetics-slider .slick-active {
   box-shadow: 0px 10px 25px 0px rgba(85, 85, 85, 0.1);
 }
 
-.cosmetics-slider {
+.cosmetics-slider,
+.news-slider {
   position: relative;
   max-width: 1320px;
 }
+
 /* Стрелка */
-.cosmetics-slider .slick-arrow {
+.cosmetics-slider .slick-arrow,
+.news-slider .slick-arrow {
   position: absolute;
   top: 50%;
   margin-top: -25px;
@@ -1241,20 +1259,24 @@ img {
   transition: all 0.2 ease-in-out;
 }
 /* Стрелка влево */
-.cosmetics-slider .slick-arrow.slick-prev {
+.cosmetics-slider .slick-arrow.slick-prev,
+.news-slider .slick-arrow.slick-prev {
   left: -100px;
   background-image: url("../images/arrow-left-disabled.svg");
 }
 /* Стрелка вправо */
-.cosmetics-slider .slick-arrow.slick-next {
+.cosmetics-slider .slick-arrow.slick-next,
+.news-slider .slick-arrow.slick-next {
   right: -100px;
   background-image: url("../images/arrow-right-disabled.svg");
 }
 
-.cosmetics-slider .slick-arrow.slick-prev:hover {
+.cosmetics-slider .slick-arrow.slick-prev:hover,
+.news-slider .slick-arrow.slick-prev:hover {
   background-image: url("../images/arrow-left.svg");
 }
 
-.cosmetics-slider .slick-arrow.slick-next:hover {
+.cosmetics-slider .slick-arrow.slick-next:hover,
+.news-slider .slick-arrow.slick-next:hover {
   background-image: url("../images/arrow-right.svg");
 }

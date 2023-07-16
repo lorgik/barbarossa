@@ -213,4 +213,20 @@ $(document).ready(function () {
     draggable: false,
     swipe: true,
   });
+
+  const newsCardsLength = document.querySelectorAll(".news-card").length;
+
+  $(".news-slider").slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: newsCardsLength > 2 ? 3 : newsCardsLength,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+  });
 });
