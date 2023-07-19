@@ -226,7 +226,6 @@ img {
 }
 
 .articles-link {
-  display: none;
   visibility: hidden;
   opacity: 0;
 
@@ -238,7 +237,7 @@ img {
 }
 
 .articles-link.visible {
-  display: block;
+  visibility: hidden;
   opacity: 1;
 }
 
