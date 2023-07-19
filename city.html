@@ -12,36 +12,56 @@
     <div class="wrapper">
       <img class="main-bg lock-padding" src="./assets/images/main-bg.jpg" alt="bgImage" />
       <header id="header" class="header">
-        <div class="container">
-          <a class="header-log__link" href="/">
-            <img class="header-logo" src="./assets/images/logo.png" alt="BarbarossA" width="129" height="108" />
-          </a>
-          <nav class="header-menu">
+        <nav class="header-menu lock-padding">
+          <div class="container">
+            <a href="/" class="header-logo__link">
+              <img class="header-logo" src="./assets/images/logo.png" alt="BarbarossA" width="67" height="56" />
+            </a>
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--choose popup-link" href="#popup">Казань</a>
+                <a href="#popup" class="menu__list-link menu__list-link--choose popup-link">Выбери свой барбершоп</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="./index.html#about">О нас</a>
+                <a href="./index.html#about" class="menu__list-link">О нас</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="./articles.html">Статьи</a>
+                <a href="./promotions.html" class="menu__list-link">Акции</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--academy" href="#">Академия</a>
+                <a href="./articles.html" class="menu__list-link">Статьи</a>
+              </li>
+              <li class="menu__list-item submenu">
+                <span class="menu__list-link menu__list-link--academy">Академия</span>
+                <ul class="submenu__list">
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (СПБ)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (ОМСК)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (КАЗАХСТАН)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">ОНЛАЙН-АКАДЕМИЯ ДЛЯ БАРБЕРОВ</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ ВЛАДЕЛЬЦЕВ</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Франшиза</a>
+                <a href="#" target="_blank" class="menu__list-link">Франшиза</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Одежда</a>
+                <a href="#" target="_blank" class="menu__list-link">Одежда</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="./contacts.html">Контакты</a>
+                <a href="./contacts.html" class="menu__list-link">Контакты</a>
               </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
 
       <div class="content">
@@ -119,62 +139,58 @@
             <h2 class="cosmetics-title title">Попробуйте нашу косметику</h2>
           </div>
           <div class="cosmetics__slider-container">
-            <div class="cosmetics__slider-arrow arrow-left arrow"></div>
-
             <div class="cosmetics-slider">
               <div class="cosmetics__card">
-                <img class="cosmetics__card-image" src="./assets/images/cosmetics/image-1.png" alt="product" width="192" height="263" draggable="felse" />
+                <img class="cosmetics__card-image" data-lazy="./assets/images/cosmetics/image-1.png" alt="product" width="192" height="263" draggable="felse" />
                 <h3 class="cosmetics__card-title">Бальзам для волос</h3>
                 <p class="cosmetics__card-desc">В наличии</p>
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button">В корзину</a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
-                <img class="cosmetics__card-image" src="./assets/images/cosmetics/image-2.png" alt="product" width="192" height="263" draggable="felse" />
+                <img class="cosmetics__card-image" data-lazy="./assets/images/cosmetics/image-2.png" alt="product" width="192" height="263" draggable="felse" />
                 <h3 class="cosmetics__card-title">Бальзам для волос</h3>
                 <p class="cosmetics__card-desc">В наличии</p>
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
-                <img class="cosmetics__card-image" src="./assets/images/cosmetics/image-3.png" alt="product" width="192" height="263" draggable="felse" />
+                <img class="cosmetics__card-image" data-lazy="./assets/images/cosmetics/image-3.png" alt="product" width="192" height="263" draggable="felse" />
                 <h3 class="cosmetics__card-title">Бальзам для волос</h3>
                 <p class="cosmetics__card-desc">В наличии</p>
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
-                <img class="cosmetics__card-image" src="./assets/images/cosmetics/image-4.png" alt="product" width="192" height="263" draggable="felse" />
+                <img class="cosmetics__card-image" data-lazy="./assets/images/cosmetics/image-4.png" alt="product" width="192" height="263" draggable="felse" />
                 <h3 class="cosmetics__card-title">Бальзам для волос</h3>
                 <p class="cosmetics__card-desc">В наличии</p>
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
-                <img class="cosmetics__card-image" src="./assets/images/cosmetics/image-1.png" alt="product" width="192" height="263" draggable="felse" />
+                <img class="cosmetics__card-image" data-lazy="./assets/images/cosmetics/image-1.png" alt="product" width="192" height="263" draggable="felse" />
                 <h3 class="cosmetics__card-title">Бальзам для волос</h3>
                 <p class="cosmetics__card-desc">В наличии</p>
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
             </div>
-
-            <div class="cosmetics__slider-arrow arrow-right arrow"></div>
           </div>
         </section>
 
@@ -363,111 +379,94 @@
             <div class="container">
               <h2 class="articles-title title">Статьи</h2>
               <div class="articles-box">
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card big-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card big-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card big-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card big-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a href="#" class="articles-link">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
               </div>
+              <a href="./articles.html" class="articles-button button">Перейти ко всем статьям</a>
             </div>
           </section>
 
           <section class="news">
             <div class="container">
               <h2 class="news-title title">Новости</h2>
-            </div>
-            <div class="news__slider-container">
-              <div class="news__slider-arrow arrow-left arrow"></div>
-              <div class="container">
-                <div class="news-slider">
-                  <a href="#" class="news-link">
-                    <div class="news-card">
-                      <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
-                      <span class="news-card__date">03.09.2023</span>
-                      <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
-                      <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
-                    </div>
-                  </a>
-                  <a href="#" class="news-link">
-                    <div class="news-card">
-                      <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
-                      <span class="news-card__date">03.09.2023</span>
-                      <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
-                      <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
-                    </div>
-                  </a>
-                  <a href="#" class="news-link">
-                    <div class="news-card">
-                      <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
-                      <span class="news-card__date">03.09.2023</span>
-                      <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
-                      <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
-                    </div>
-                  </a>
-                </div>
+              <div class="news-slider">
+                <a href="#" class="news-link news-card">
+                  <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
+                  <span class="news-card__date">03.09.2023</span>
+                  <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
+                  <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
+                </a>
+                <a href="#" class="news-link news-card">
+                  <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
+                  <span class="news-card__date">03.09.2023</span>
+                  <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
+                  <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
+                </a>
+                <a href="#" class="news-link news-card">
+                  <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
+                  <span class="news-card__date">03.09.2023</span>
+                  <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
+                  <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
+                </a>
+                <a href="#" class="news-link news-card">
+                  <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
+                  <span class="news-card__date">03.09.2023</span>
+                  <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
+                  <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
+                </a>
               </div>
-              <div class="news__slider-arrow arrow-right arrow"></div>
             </div>
           </section>
         </div>
@@ -481,6 +480,7 @@
           </div>
         </section>
       </div>
+
       <footer class="footer">
         <div class="container">
           <div class="footer-top">
@@ -554,6 +554,8 @@
       <a class="popup__close close-popup" href="#header"></a>
     </div>
 
-    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/city.js"></script>
   </body>
 </html>
