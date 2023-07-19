@@ -800,6 +800,7 @@ img {
 
 .arcticles-card {
   position: relative;
+  z-index: 10;
   height: 330px;
   max-width: 361px;
   width: 100%;
