@@ -19,7 +19,7 @@
           <nav class="header-menu">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--choose popup-link" href="#popup"> Выбери свой барбершоп </a>
+                <a class="menu__list-link menu__list-link--choose popup-link" href="#popup">Казань</a>
               </li>
               <li class="menu__list-item">
                 <a class="menu__list-link" href="./index.html#about">О нас</a>
@@ -59,18 +59,23 @@
                 <img class="video-button" src="./assets/images/video-play-button.svg" alt="video-button" width="93" height="93" />
               </a>
             </div>
-            <div class="statistics">
-              <div class="statistics-card statistics-card--location">
-                <h3 class="statistics-card__title">казань</h3>
-                <p class="statistics-card__text">ул. Чистопольская, дом 73</p>
+            <div class="info">
+              <div class="info-card">
+                <h3 class="info-card__title">Казань</h3>
+                <p class="info-card__text">ул. Чистопольская, дом 73</p>
+                <img src="./assets/images/city/info-location-icon.svg" alt="Мужчина на стрижке" class="info-card__image" width="82" height="82" />
               </div>
-              <div class="statistics-card statistics-card--rate">
-                <h3 class="statistics-card__title">5,0</h3>
-                <p class="statistics-card__text">Рейтинг в Яндекс</p>
+              <div class="info-card">
+                <h3 class="info-card__title">5,0</h3>
+                <p class="info-card__text">Рейтинг в Яндекс</p>
+                <a href="#" class="info-card__image">
+                  <img src="./assets/images/city/info-yandex-icon.svg" alt="Мужчина на стрижке" class="" width="82" height="82" />
+                </a>
               </div>
-              <div class="statistics-card statistics-card--clock">
-                <h3 class="statistics-card__title">Работаем</h3>
-                <p class="statistics-card__text">10:00 - 21: 00</p>
+              <div class="info-card">
+                <h3 class="info-card__title">Работаем</h3>
+                <p class="info-card__text">10:00 - 21: 00</p>
+                <img src="./assets/images/city/info-clock-icon.svg" alt="Мужчина на стрижке" class="info-card__image" width="82" height="82" />
               </div>
             </div>
           </div>
@@ -179,10 +184,124 @@
               <h2 class="services-title title">Наши услуги</h2>
               <div class="services-line"></div>
             </div>
+            <div class="services-bottom">
+              <div class="services__table">
+                <div class="services__table-row">
+                  <p class="row-title">Мужская стрижка</p>
+                  <span class="row-time">/60 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">1 500 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Моделирование бороды</p>
+                  <span class="row-time">/45 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">1 200 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Детская стрижка</p>
+                  <span class="row-time">/45 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">900 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Стрижка отца и сына</p>
+                  <span class="row-time">/60 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">2 200 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Мужская стрижка + моделирование бороды</p>
+                  <span class="row-time">/90 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">2 500 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Королевское бритье</p>
+                  <span class="row-time">/45 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">1 500 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Мужская стрижка</p>
+                  <span class="row-time">/60 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">1 200 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Эпиляция воском: 1 зона</p>
+                  <span class="row-time">/15 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">400 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Камуфляж седых волос</p>
+                  <span class="row-time">/20 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">900 ₽</p>
+                </div>
+                <div class="services__table-row">
+                  <p class="row-title">Стрижка машинкой</p>
+                  <span class="row-time">/30 мин</span>
+                  <div class="row-line"></div>
+                  <p class="row-price">600 ₽</p>
+                </div>
+                <a href="#" class="button table-button">Записаться онлайн</a>
+              </div>
+              <div class="services-box col-5" style="background-image: url(./assets/images/city/services-box-bg.jpg)">
+                <div class="services-box__image" style="background-image: url(./assets/images/city/services-box-man.png)"></div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <div class="youtube-bg">
+        <div class="black-bg">
+          <div class="container">
+            <div class="arrow-down"></div>
+          </div>
+
+          <section class="vkontakte">
+            <div class="container">
+              <div class="vkontakte-box">
+                <h2 class="vkontakte-title title">Мы Во ВКонтакте</h2>
+                <a href="#" class="vkontakte-button button">ВКонтакте</a>
+              </div>
+              <div class="vkontakte-posts">
+                <div class="vkontakte-post">
+                  <img class="vkontakte-image" src="./assets/images/city/vkontakte/post-1.jpg" alt="youtube-video" width="306" height="307" />
+                  <a href="#" class="vkontakte-post__tooltip">
+                    <h3 class="vkontakte-post__title">
+                      Друзья, мы запускаем новую акцию в нашей сети💥 Два друга по цене одной стрижки💥 Приведи друга и получи бесплатную стрижку
+                    </h3>
+                  </a>
+                </div>
+                <div class="vkontakte-post">
+                  <img class="vkontakte-image" src="./assets/images/city/vkontakte/post-1.jpg" alt="youtube-video" width="306" height="307" />
+                  <a href="#" class="vkontakte-post__tooltip">
+                    <h3 class="vkontakte-post__title">
+                      Друзья, мы запускаем новую акцию в нашей сети💥 Два друга по цене одной стрижки💥 Приведи друга и получи бесплатную стрижку
+                    </h3>
+                  </a>
+                </div>
+                <div class="vkontakte-post">
+                  <img class="vkontakte-image" src="./assets/images/city/vkontakte/post-1.jpg" alt="youtube-video" width="306" height="307" />
+                  <a href="#" class="vkontakte-post__tooltip">
+                    <h3 class="vkontakte-post__title">
+                      Друзья, мы запускаем новую акцию в нашей сети💥 Два друга по цене одной стрижки💥 Приведи друга и получи бесплатную стрижку
+                    </h3>
+                  </a>
+                </div>
+                <div class="vkontakte-post">
+                  <img class="vkontakte-image" src="./assets/images/city/vkontakte/post-1.jpg" alt="youtube-video" width="306" height="307" />
+                  <a href="#" class="vkontakte-post__tooltip">
+                    <h3 class="vkontakte-post__title">
+                      Друзья, мы запускаем новую акцию в нашей сети💥 Два друга по цене одной стрижки💥 Приведи друга и получи бесплатную стрижку
+                    </h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
           <section class="youtube">
             <div class="container">
               <div class="youtube-box">
@@ -191,49 +310,49 @@
                   <p class="youtube-subtitle subtitle">500k + подписчиков</p>
                 </h2>
 
-                <a class="youtube-button button" href="#">Перейти на YouTube</a>
+                <a href="#" class="youtube-button button">YouTube</a>
               </div>
               <div class="youtube-videos">
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#">
+                  <a href="#" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
-                    <p class="youtube-video__link" href="#">Смотреть</p>
+                    <p class="youtube-video__link">Смотреть</p>
                   </a>
                 </div>
               </div>
@@ -244,7 +363,7 @@
             <div class="container">
               <h2 class="articles-title title">Статьи</h2>
               <div class="articles-box">
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card big-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -255,7 +374,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -266,7 +385,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -277,7 +396,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -288,7 +407,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card big-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -299,7 +418,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -322,7 +441,7 @@
               <div class="news__slider-arrow arrow-left arrow"></div>
               <div class="container">
                 <div class="news-slider">
-                  <a class="news-link" href="#">
+                  <a href="#" class="news-link">
                     <div class="news-card">
                       <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                       <span class="news-card__date">03.09.2023</span>
@@ -330,7 +449,7 @@
                       <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
                     </div>
                   </a>
-                  <a class="news-link" href="#">
+                  <a href="#" class="news-link">
                     <div class="news-card">
                       <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                       <span class="news-card__date">03.09.2023</span>
@@ -338,7 +457,7 @@
                       <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
                     </div>
                   </a>
-                  <a class="news-link" href="#">
+                  <a href="#" class="news-link">
                     <div class="news-card">
                       <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                       <span class="news-card__date">03.09.2023</span>
@@ -353,14 +472,14 @@
           </section>
         </div>
 
-        <div class="map">
+        <section class="map">
           <div class="container">
             <h2 class="map-title title">Как нас найти</h2>
             <div class="map-container col-12">
               <p class="map-subtitle subtitle">Больше 32 барбершопов в СНГ</p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
       <footer class="footer">
         <div class="container">
@@ -393,9 +512,9 @@
                 <a class="footer-links__mail" href="#">tuaev@barbarossa.top</a>
               </div>
               <div class="footer-links__box footer-links__box--socials">
-                <a class="links-button links-button--whatsapp button" href="#"> WhatsApp </a>
-                <a class="links-button links-button--youtube button" href="#"> YouTube </a>
-                <a class="links-button links-button--vkontakte button" href="#"> ВКонтакте </a>
+                <a class="links-button links-button--whatsapp button" href="#">WhatsApp</a>
+                <a class="links-button links-button--youtube button" href="#">YouTube</a>
+                <a class="links-button links-button--vkontakte button" href="#">ВКонтакте</a>
               </div>
             </div>
           </div>

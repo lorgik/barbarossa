@@ -92,9 +92,9 @@ img {
 .main-bg {
   position: absolute;
   z-index: -1;
-  object-fit: cover;
   width: 100%;
   height: 915px;
+  object-fit: cover;
   background-color: var(--color-main-black);
 }
 
@@ -108,26 +108,43 @@ img {
   flex: 1 1 auto;
 }
 
-.header {
-  padding-top: 22px;
-  /* background-color: #2c2c2c; */
+.header-log__link {
+  margin-top: 50px;
+  display: inline-block;
 }
 
-.header .container {
+.header-menu {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  background-color: var(--color-main-black);
+  height: 40px;
+}
+
+.header-menu .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.menu__list {
+.header-menu .menu__list {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   gap: 45px;
+  margin-bottom: 0;
+  width: 100%;
+  padding-left: 0;
 }
 
 .menu__list-item {
   font-size: 0.875rem;
+}
+
+.menu__list-item:last-of-type {
+  margin-left: auto;
 }
 
 .menu__list-link {
@@ -140,6 +157,7 @@ img {
 
 .menu__list-link--choose {
   position: relative;
+  display: inline-block;
   background-color: var(--color-main-orange);
   padding: 8px 28px 8px 14px;
   border-radius: 5px;
@@ -181,9 +199,27 @@ img {
   border-top-color: var(--color-main-orange);
 }
 
+.submenu {
+  position: relative;
+}
+
+.submenu:hover .submenu__list {
+  display: flex;
+}
+
+.submenu__list {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
 .main {
   position: relative;
-  margin-top: 39px;
+  margin-top: 40px;
 }
 
 .main .container {
@@ -314,18 +350,6 @@ img {
   position: absolute;
   right: 0;
   bottom: 1px;
-}
-
-.statistics-card::after {
-  z-index: 0;
-  position: absolute;
-  content: "";
-  right: 0;
-  bottom: 1px;
-  width: 238px;
-  height: 229px;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .gallery {
@@ -582,41 +606,30 @@ img {
   margin: 0 auto;
 }
 
-.youtube {
-  padding-top: 152px;
-  margin-top: 97px;
+.black-bg {
   position: relative;
-}
-
-.youtube-bg {
   z-index: 0;
-  position: relative;
-  margin: 0 auto;
-  top: 0;
-  left: 0;
-  right: 0;
+  margin-top: 77px;
 
   /* width: 1842px; */
-  height: 2406px;
+  height: 2506px;
 
-  background-image: url("../images/youtube-bg.png");
+  background-image: url("../images/black-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.youtube-box {
+.black-bg > .container {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.youtube-box::before {
+.arrow-down {
   z-index: 1;
   position: absolute;
   content: "";
-  right: 80px;
+  top: -42px;
+  right: 97px;
 
   width: 84px;
   height: 84px;
@@ -629,16 +642,28 @@ img {
 
 @keyframes jump {
   0% {
-    top: -195px;
+    top: -42px;
   }
 
   50% {
-    top: -215px;
+    top: -62px;
   }
 
   100% {
-    top: -195px;
+    top: -42px;
   }
+}
+
+.youtube {
+  padding-top: 152px;
+  margin-top: 97px;
+  position: relative;
+}
+
+.youtube-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .youtube-title {
@@ -655,8 +680,31 @@ img {
 }
 
 .youtube-button {
-  padding: 27px 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 27px 40px 27px 80px;
+  font-size: 1.25rem;
   border-radius: 15px;
+  background-color: #eb3323;
+}
+
+.youtube-button:hover {
+  background-color: #cf2f1d;
+}
+
+.youtube-button::before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  left: 41px;
+
+  width: 32px;
+  height: 19px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/youtube-icon.png");
 }
 
 .youtube-videos {
@@ -821,8 +869,19 @@ img {
   font-size: 1.0625rem;
 }
 
+.articles-button {
+  margin: 24px auto 0;
+  display: block;
+  padding: 28px 36px;
+
+  font-size: 1.25rem;
+  border-radius: 15px;
+  max-width: 300px;
+}
+
 .news {
   margin-top: 100px;
+  overflow: hidden;
 }
 
 .news-slider {
@@ -1256,7 +1315,7 @@ img {
   background-size: contain;
   background-color: transparent;
 
-  transition: all 0.2 ease-in-out;
+  transition: background-image 0.2s ease-in-out;
 }
 /* Стрелка влево */
 .cosmetics-slider .slick-arrow.slick-prev,

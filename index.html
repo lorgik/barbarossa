@@ -10,25 +10,41 @@
   </head>
   <body>
     <div class="wrapper">
-      <img class="main-bg lock-padding" src="./assets/images/main-bg.jpg" alt="bgImage" />
+      <img class="main-bg lock-padding" src="./assets/images/main-bg.jpg" />
       <header id="header" class="header">
         <div class="container">
-          <a class="header-log__link" href="/">
-            <img class="header-logo" src="./assets/images/logo.png" alt="BarbarossA" width="129" height="108" />
+          <a href="/" class="header-log__link">
+            <img class="header-logo" src="./assets/images/logo.png" alt="BarbarossA" width="100" height="83" />
           </a>
-          <nav class="header-menu">
+        </div>
+        <nav class="header-menu lock-padding">
+          <div class="container">
             <ul class="menu__list">
-              <li class="menu__list-item">
-                <a href="#popup" class="menu__list-link menu__list-link--choose popup-link"> Выбери свой барбершоп </a>
-              </li>
               <li class="menu__list-item">
                 <a href="./index.html#about" class="menu__list-link">О нас</a>
               </li>
               <li class="menu__list-item">
                 <a href="./articles.html" class="menu__list-link">Статьи</a>
               </li>
-              <li class="menu__list-item">
-                <a href="#" class="menu__list-link menu__list-link--academy">Академия</a>
+              <li class="menu__list-item submenu">
+                <span class="menu__list-link menu__list-link--academy">Академия</span>
+                <ul class="submenu__list">
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (СПБ)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (ОМСК)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (КАЗАХСТАН)</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">ОНЛАЙН-АКАДЕМИЯ ДЛЯ БАРБЕРОВ</a>
+                  </li>
+                  <li class="submenu___list-item">
+                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ ВЛАДЕЛЬЦЕВ</a>
+                  </li>
+                </ul>
               </li>
               <li class="menu__list-item">
                 <a href="#" target="_blank" class="menu__list-link">Франшиза</a>
@@ -39,9 +55,12 @@
               <li class="menu__list-item">
                 <a href="./contacts.html" class="menu__list-link">Контакты</a>
               </li>
+              <li class="menu__list-item">
+                <a href="#popup" class="menu__list-link menu__list-link--choose popup-link">Выбери свой барбершоп</a>
+              </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
       <div class="content">
         <main class="main">
@@ -49,12 +68,12 @@
             <h1 class="main-subtitle subtitle">Легендарная сеть барбершопов</h1>
             <p class="main-title title">Запишись в свой барбершоп со скидкой 20%*</p>
             <div class="main__button-box">
-              <a class="main-button button popup-link" href="#popup">Выбрать барбершоп</a>
-              <span class="main__button-decription"> * акция действует на первое посещение </span>
+              <a href="#popup" class="main-button button popup-link">Выбрать барбершоп</a>
+              <span class="main__button-decription">* акция действует на первое посещение</span>
             </div>
             <div class="main-video">
               <img class="video-cirlce" src="./assets/images/video-text-circle.svg" alt="video-cirlce" width="219" height="219" />
-              <a class="video-link" href="#">
+              <a href="#" class="video-link">
                 <img class="video-button" src="./assets/images/video-play-button.svg" alt="video-button" width="93" height="93" />
               </a>
             </div>
@@ -97,13 +116,13 @@
           <div class="gallery-shadow"></div>
           <div class="gallery-slider__container">
             <div id="gallery-slider" class="gallery-slider">
-              <a class="gallery-link popup-link" href="#popup__gallery">
+              <a href="#popup__gallery" class="gallery-link popup-link">
                 <img class="gallery-slide" src="./assets/images/gallery/gallery-image-1.jpg" alt="barbershop" width="416" height="416" />
               </a>
-              <a class="gallery-link popup-link" href="#popup__gallery">
+              <a href="#popup__gallery" class="gallery-link popup-link">
                 <img class="gallery-slide" src="./assets/images/gallery/gallery-image-2.jpg" alt="barbershop" width="416" height="416" />
               </a>
-              <a class="gallery-link popup-link" href="#popup__gallery">
+              <a href="#popup__gallery" class="gallery-link popup-link">
                 <img class="gallery-slide" src="./assets/images/gallery/gallery-image-3.jpg" alt="barbershop" width="416" height="416" />
               </a>
             </div>
@@ -133,7 +152,7 @@
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" target="_blank" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
@@ -143,7 +162,7 @@
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" target="_blank" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
@@ -153,7 +172,7 @@
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" target="_blank" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
               <div class="cosmetics__card">
@@ -163,13 +182,16 @@
                 <div class="cosmetics__card-prices">
                   <span class="cosmetics__card-price">1 215 ₽</span>
                   <span class="cosmetics__card-oldprice">1 500 ₽</span>
-                  <a href="#" target="_blank" class="cosmetics__card-button button"> В корзину </a>
+                  <a href="#" target="_blank" class="cosmetics__card-button button">В корзину</a>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <div class="youtube-bg">
+        <div class="black-bg">
+          <div class="container">
+            <div class="arrow-down"></div>
+          </div>
           <section class="youtube">
             <div class="container">
               <div class="youtube-box">
@@ -178,12 +200,12 @@
                   <p class="youtube-subtitle subtitle">500k + подписчиков</p>
                 </h2>
 
-                <a class="youtube-button button" href="#" target="_blank">Перейти на YouTube</a>
+                <a href="#" target="_blank" class="youtube-button button">YouTube</a>
               </div>
               <div class="youtube-videos">
                 <div class="youtube-video">
                   <img class="youtube-image" src="./assets/images/youtube-test/maxresdefault.jpg" alt="youtube-video" width="416" height="234" />
-                  <a class="youtube-video__tooltip" href="#" target="_blank">
+                  <a href="#" target="_blank" class="youtube-video__tooltip">
                     <h3 class="youtube-video__title">ЛУЧШИЕ стрижки ВЫДАЮЩИХСЯ хоккеистов! / Обзор причесок легендарных спортсменов в хоккее</h3>
                     <p class="youtube-video__link">Смотреть</p>
                   </a>
@@ -231,7 +253,7 @@
             <div class="container">
               <h2 class="articles-title title">Статьи</h2>
               <div class="articles-box">
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card big-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -242,7 +264,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -253,7 +275,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -264,7 +286,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -275,7 +297,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card big-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -286,7 +308,7 @@
                     </p>
                   </div>
                 </a>
-                <a class="articles-link" href="#">
+                <a href="#" class="articles-link">
                   <div class="arcticles-card">
                     <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
                     <span class="articles-card__date">03.09.2023</span>
@@ -298,6 +320,7 @@
                   </div>
                 </a>
               </div>
+              <a href="./articles.html" class="articles-button button">Перейти ко всем статьям</a>
             </div>
           </section>
 
@@ -305,25 +328,25 @@
             <div class="container">
               <h2 class="news-title title">Новости</h2>
               <div class="news-slider">
-                <a class="news-link news-card" href="#">
+                <a href="#" class="news-link news-card">
                   <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                   <span class="news-card__date">03.09.2023</span>
                   <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
                   <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
                 </a>
-                <a class="news-link news-card" href="#">
+                <a href="#" class="news-link news-card">
                   <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                   <span class="news-card__date">03.09.2023</span>
                   <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
                   <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
                 </a>
-                <a class="news-link news-card" href="#">
+                <a href="#" class="news-link news-card">
                   <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                   <span class="news-card__date">03.09.2023</span>
                   <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
                   <p class="news-card__text">Всё это можно приобрести в любом нашем барбершопе по очень приятным ценам.</p>
                 </a>
-                <a class="news-link news-card" href="#">
+                <a href="#" class="news-link news-card">
                   <img class="news-card__image" src="./assets/images/news-test/news-1.jpg" alt="article-bg" width="416" height="330" />
                   <span class="news-card__date">03.09.2023</span>
                   <h3 class="news-card__title">BARBAROSSA с заботой о вашей бороде!</h3>
@@ -346,48 +369,48 @@
       <footer class="footer">
         <div class="container">
           <div class="footer-top">
-            <a class="footer-logo__link" href="/">
+            <a href="/" class="footer-logo__link">
               <img class="footer-logo" src="./assets/images/logo.png" alt="BarbarossA" width="152" height="127" />
             </a>
             <nav class="footer-menu">
               <ul class="footer-menu__list">
                 <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="#">Главная</a>
+                  <a href="#" class="footer-menu__link">Главная</a>
                 </li>
                 <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="#">Статьи</a>
+                  <a href="#" class="footer-menu__link">Статьи</a>
                 </li>
                 <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="#">Академия</a>
+                  <a href="#" class="footer-menu__link">Академия</a>
                 </li>
                 <li class="footer-menu__item">
-                  <a class="footer-menu__link" href="#">Франшиза</a>
+                  <a href="#" class="footer-menu__link">Франшиза</a>
                 </li>
               </ul>
             </nav>
             <div class="footer-links">
               <div class="footer-links__box">
-                <a class="footer-links__phone" href="#">
+                <a href="#" class="footer-links__phone">
                   +7 977 898-30-18
-                  <span class="footer-links__phone--subtitle"> Заказать обратный звонок </span>
+                  <span class="footer-links__phone--subtitle">Заказать обратный звонок</span>
                 </a>
-                <a class="footer-links__mail" href="#">tuaev@barbarossa.top</a>
+                <a href="#" class="footer-links__mail">tuaev@barbarossa.top</a>
               </div>
               <div class="footer-links__box footer-links__box--socials">
-                <a class="links-button links-button--whatsapp button" href="#"> WhatsApp </a>
-                <a class="links-button links-button--youtube button" href="#"> YouTube </a>
-                <a class="links-button links-button--vkontakte button" href="#"> ВКонтакте </a>
+                <a href="#" class="links-button links-button--whatsapp button">WhatsApp</a>
+                <a href="#" class="links-button links-button--youtube button">YouTube</a>
+                <a href="#" class="links-button links-button--vkontakte button">ВКонтакте</a>
               </div>
             </div>
           </div>
           <div class="footer-privacy">
-            <a class="footer-privacy__link" href="#"> Политика конфиденциальности </a>
-            <a class="footer-privacy__link" href="#"> Пользовательское соглашение </a>
-            <a class="footer-privacy__link" href="#">Публичная оферта</a>
+            <a href="#" class="footer-privacy__link">Политика конфиденциальности</a>
+            <a href="#" class="footer-privacy__link">Пользовательское соглашение</a>
+            <a href="#" class="footer-privacy__link">Публичная оферта</a>
           </div>
           <div class="footer-copyright">
-            <span class="footer-copyright__text"> © 2019 — 2023 Cеть барбершопов BarbarossA </span>
-            <span class="footer-copyright__text"> ООО БАРБАРОССА ИНН: 026910665709, ОГРНИП: 320028000012351 </span>
+            <span class="footer-copyright__text">© 2019 — 2023 Cеть барбершопов BarbarossA</span>
+            <span class="footer-copyright__text">ООО БАРБАРОССА ИНН: 026910665709, ОГРНИП: 320028000012351</span>
           </div>
         </div>
       </footer>
