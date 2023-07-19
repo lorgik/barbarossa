@@ -139,5 +139,5 @@ if (tabsLinks.length > 0) {
     });
   }
 
-  showArticles();
+  return showArticles();
 }
