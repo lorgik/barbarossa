@@ -230,3 +230,25 @@ $(document).ready(function () {
     swipe: true,
   });
 });
+
+let scrollpos = window.scrollY;
+
+const header = document.querySelector(".header");
+
+const scrollChange = 27;
+
+if (scrollpos >= scrollChange) {
+  header.classList.add("fit-no-transition");
+}
+
+window.addEventListener("scroll", function () {
+  scrollpos = window.scrollY;
+
+  if (scrollpos >= scrollChange) {
+    header.classList.add("fit");
+  }
+  if (scrollpos === 0) {
+    header.classList.remove("fit");
+    header.classList.remove("fit-no-transition");
+  }
+});
