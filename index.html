@@ -34,19 +34,19 @@
                 <span class="menu__list-link menu__list-link--academy">Академия</span>
                 <ul class="submenu__list">
                   <li class="submenu___list-item">
-                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (СПБ)</a>
+                    <a href="#" target="_blank" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (СПБ)</a>
                   </li>
                   <li class="submenu___list-item">
-                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (ОМСК)</a>
+                    <a href="#" target="_blank" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (ОМСК)</a>
                   </li>
                   <li class="submenu___list-item">
-                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (КАЗАХСТАН)</a>
+                    <a href="#" target="_blank" class="submenu___list-link">АКАДЕМИЯ ДЛЯ БАРБЕРОВ (КАЗАХСТАН)</a>
                   </li>
                   <li class="submenu___list-item">
-                    <a href="#" class="submenu___list-link">ОНЛАЙН-АКАДЕМИЯ ДЛЯ БАРБЕРОВ</a>
+                    <a href="#" target="_blank" class="submenu___list-link">ОНЛАЙН-АКАДЕМИЯ ДЛЯ БАРБЕРОВ</a>
                   </li>
                   <li class="submenu___list-item">
-                    <a href="#" class="submenu___list-link">АКАДЕМИЯ ДЛЯ ВЛАДЕЛЬЦЕВ</a>
+                    <a href="#" target="_blank" class="submenu___list-link">АКАДЕМИЯ ДЛЯ ВЛАДЕЛЬЦЕВ</a>
                   </li>
                 </ul>
               </li>
@@ -54,7 +54,7 @@
                 <a href="#" target="_blank" class="menu__list-link">Франшиза</a>
               </li>
               <li class="menu__list-item">
-                <a href="#" target="_blank" class="menu__list-link">Одежда</a>
+                <a href="https://f-barbarossa.ru/" target="_blank" class="menu__list-link">Одежда</a>
               </li>
               <li class="menu__list-item">
                 <a href="./contacts.html" class="menu__list-link">Контакты</a>
@@ -411,9 +411,63 @@
       <div class="container col-12">
         <div class="popup__barbershop popup__content">
           <h2 class="popup__barbershop-title title">Выбери барбершоп</h2>
+          <div class="popup__barbershop-tabs">
+            <a href="javascript:return false;" class="tabs-russia">Россия</a>
+            <a href="javascript:return false;" class="tabs-kazakhstan">Казахстан</a>
+            <a href="https://f-barbarossa.ru/" class="tabs-button button">Открыть свой филиал BarbarossA</a>
+          </div>
+          <div class="popup__barbershop-form">
+            <input class="form-input" type="text" placeholder="Введите свой город" />
+            <a class="form-close__button" style="background-image: url(./assets/images/close-icon.svg)"></a>
+          </div>
+          <div class="popup__barbershop-cities">
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+            <div class="city">
+              <h3 class="city-title">Ангарск</h3>
+              <a href="#" class="city-box">
+                <div class="city-box__title">Барбершоп BarbarossA Ангарск</div>
+                <div class="city-box__address">Ангарск, 89 квартал, д. 1</div>
+              </a>
+            </div>
+          </div>
+          <a class="popup__close-icon close-popup" style="background-image: url(./assets/images/close-icon.svg)"></a>
         </div>
       </div>
-      <a class="popup__close close-popup" href="#header"></a>
+      <a class="popup__close close-popup"></a>
     </div>
     <div id="popup__gallery" class="popup" style="display: none">
       <div class="container col-12">
@@ -422,6 +476,7 @@
 
           <img class="gallery-image" src="./assets/images/gallery/gallery-image-1.jpg" alt="barbershop" width="1296" height="765" />
           <div id="popup-arrow__right" class="arrow-right arrow popup-arrow popup-arrow__right"></div>
+          <a class="popup__close-icon close-popup" style="background-image: url(./assets/images/close-icon.svg)"></a>
         </div>
       </div>
 

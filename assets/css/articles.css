@@ -116,7 +116,7 @@ img {
   left: 0;
   display: flex;
 
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .header-logo__link {
@@ -630,4 +630,21 @@ img {
 
 .popup.open .popup__barbershop {
   transform: translate(0px, 0px);
+}
+
+.booking-icon {
+  z-index: 100;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 178px;
+  height: 178px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+}
+
+.booking-icon:hover {
+  transform: scale(1.05);
 }

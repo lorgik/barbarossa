@@ -42,7 +42,8 @@ p {
   margin: 0;
 }
 
-button {
+button,
+input {
   border: none;
   outline: none;
 }
@@ -116,7 +117,7 @@ img {
   left: 0;
   display: flex;
 
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s linear;
 }
 
 .header-logo__link {
@@ -125,7 +126,7 @@ img {
   width: 129px;
   height: 108px;
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s linear;
 }
 
 .header-logo__link .header-logo {
@@ -1200,12 +1201,140 @@ img {
   visibility: visible;
 }
 
+.popup a {
+  color: var(--color-secondary-black);
+}
+
+.popup__barbershop-tabs {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.tabs-russia,
+.tabs-kazakhstan {
+  font-size: 1.0625rem;
+}
+
+a.tabs-button {
+  color: var(--color-main-white);
+  padding: 17px 20px;
+  border-radius: 10px;
+  font-size: 1.0625rem;
+  box-shadow: 0px 10px 40px 0px rgba(227, 93, 18, 0.2);
+}
+
+.popup__barbershop-form {
+  margin-top: 15px;
+  position: relative;
+  max-width: 511px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  height: 64px;
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--color-secondary-black);
+}
+
+.form-close__button {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
+  background-size: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup__barbershop-cities {
+  padding-top: 13px;
+  padding-left: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: scroll;
+  max-height: 439px;
+  max-width: 511px;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar {
+  width: 2px;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar-track {
+  background-color: #e8e8e8;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-orange);
+}
+
+.city-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+.city-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 17px;
+  font-size: 0.875rem;
+}
+
+.city-box::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-main-orange);
+}
+
+.city-box__title {
+  font-weight: 700;
+}
+
 .popup__close {
   z-index: -1;
   position: absolute;
   width: 100%;
   height: 100%;
   cursor: unset;
+}
+
+.popup__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
+  background-size: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup__close-icon:hover,
+.form-close__button:hover {
+  transform: scale(1.2);
 }
 
 .popup__barbershop {
