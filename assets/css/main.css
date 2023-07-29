@@ -1363,6 +1363,7 @@ a.tabs-button {
   padding: 70px 50px 33px 50px;
 
   height: 765px;
+  max-height: 90vmin;
   background-color: var(--color-main-white);
   color: var(--color-secondary-black);
   border-radius: 40px;
