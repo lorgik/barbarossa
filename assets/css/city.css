@@ -521,24 +521,6 @@ img {
   width: 100%;
 }
 
-.cosmetics-slider.no-transition {
-  scroll-behavior: auto;
-}
-
-.cosmetics-slider.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.cosmetics-slider.dragging .cosmetics__card {
-  cursor: grab;
-  user-select: none;
-}
-
-.cosmetics-slider::-webkit-scrollbar {
-  display: none;
-}
-
 .cosmetics__card {
   scroll-snap-align: start;
   border-radius: 10px;

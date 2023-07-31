@@ -163,3 +163,19 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fit-no-transition");
   }
 });
+
+$(document).ready(function () {
+  $(".promotions-slider").slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+  });
+});

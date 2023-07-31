@@ -283,6 +283,7 @@ img {
 .articles-link {
   visibility: hidden;
   opacity: 0;
+  display: none;
 
   transition: all 0.2s ease-in-out;
 }
@@ -292,6 +293,7 @@ img {
 }
 
 .articles-link.visible {
+  display: inline-block;
   visibility: hidden;
   opacity: 1;
 }
@@ -315,16 +317,14 @@ img {
   position: relative;
   top: -165px;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 526px 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 24px;
 }
 
 .articles-box {
   margin-top: 199px;
-  height: 1083px;
   background-color: var(--color-main-white);
   border-radius: 100px 100px 0 0;
 }
@@ -334,6 +334,7 @@ img {
   z-index: 10;
   height: 330px;
   width: 100%;
+  max-width: 361px;
 
   padding: 0 30px;
 
@@ -390,6 +391,19 @@ img {
   margin-top: 10px;
 
   font-size: 1.0625rem;
+}
+
+.articles-button {
+  top: -100px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  max-width: 224px;
+  text-align: center;
+  padding: 26px 92px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 15px;
 }
 
 .footer {

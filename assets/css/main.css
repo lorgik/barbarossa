@@ -525,24 +525,6 @@ img {
   width: 100%;
 }
 
-.cosmetics-slider.no-transition {
-  scroll-behavior: auto;
-}
-
-.cosmetics-slider.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.cosmetics-slider.dragging .cosmetics__card {
-  cursor: grab;
-  user-select: none;
-}
-
-.cosmetics-slider::-webkit-scrollbar {
-  display: none;
-}
-
 .cosmetics__card {
   scroll-snap-align: start;
   border-radius: 10px;
@@ -910,24 +892,16 @@ img {
   overflow: hidden;
 }
 
-.news-slider {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 0;
-}
-
 .news-card {
+  display: inline-block;
   position: relative;
-  height: 330px;
   max-width: 416px;
-  width: 100%;
-
+  height: 330px;
   padding: 0 30px;
-
   border-radius: 20px;
 
   overflow: hidden;
+  object-fit: cover;
 
   transition: transform 0.2s ease-in-out;
 }
@@ -1187,7 +1161,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vmin;
+  height: 100dvh;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -1209,6 +1183,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .popup__barbershop-left {
