@@ -642,6 +642,7 @@ img {
   /* width: 1842px; */
   height: 2506px;
 
+  border-radius: 100px;
   background-image: url("../images/black-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -867,6 +868,8 @@ img {
   bottom: 0;
   right: 0;
   background-color: #000;
+  width: inherit;
+  height: inherit;
 }
 
 .articles-card__date,
@@ -906,6 +909,7 @@ img {
   font-size: 1.25rem;
   border-radius: 15px;
   max-width: 300px;
+  text-align: center;
 }
 
 .news {
@@ -1491,13 +1495,13 @@ a.tabs-button {
 /* Стрелка влево */
 .cosmetics-slider .slick-arrow.slick-prev,
 .news-slider .slick-arrow.slick-prev {
-  left: -100px;
+  left: -55px;
   background-image: url("../images/arrow-left-disabled.svg");
 }
 /* Стрелка вправо */
 .cosmetics-slider .slick-arrow.slick-next,
 .news-slider .slick-arrow.slick-next {
-  right: -100px;
+  right: -55px;
   background-image: url("../images/arrow-right-disabled.svg");
 }
 
@@ -1552,6 +1556,7 @@ a.tabs-button {
     background-image: none;
     background-color: var(--color-main-black);
     border-radius: 100px;
+    height: unset;
   }
   .youtube {
     margin-top: 50px;
@@ -1767,32 +1772,45 @@ a.tabs-button {
     margin-top: 80px;
   }
   .black-bg {
+    margin-top: 30px;
     border-radius: 60px;
   }
   .youtube {
     margin-top: 0;
+    padding-top: 70px;
   }
-  .youtube-box {
-    flex-wrap: wrap;
-  }
+
   .youtube-button {
-    margin-top: 60px;
+    /* margin-top: 60px; */
+    font-size: 0;
+    padding: unset;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+  }
+  .youtube-button::before {
+    left: 13px;
+    top: 16px;
+    width: 20px;
+    height: 14px;
   }
   .youtube-videos {
+    margin-top: 40px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
-  .youtube-video {
-    height: 304px;
-  }
+
   .youtube-image {
     width: inherit;
     height: inherit;
   }
+  .youtube-subtitle {
+    top: 35px;
+  }
 }
 
 @media screen and (max-width: 370px) {
-  .main-title {
+  .title {
     font-size: 2.5rem;
   }
 }
