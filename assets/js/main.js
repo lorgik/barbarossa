@@ -252,3 +252,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fit-no-transition");
   }
 });
+
+const articlesCards = document.querySelectorAll(".arcticles-card");
+articlesCards[0].classList.add("big-card");
+articlesCards[4].classList.add("big-card");

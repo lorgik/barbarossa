@@ -137,6 +137,26 @@ if (tabsLinks.length > 0) {
         card.classList.add("visible");
       }
     });
+
+    arcticlesCard.forEach(function (card) {
+      if (card.classList.contains("big-card")) {
+        card.classList.remove("big-card");
+      }
+    });
+
+    const visibleArticlesCards = document.querySelectorAll(".arcticles-card.visible");
+
+    for (let i = 0; i < visibleArticlesCards.length / 9; i++) {
+      if (visibleArticlesCards[0 + i * 9]) {
+        visibleArticlesCards[0 + i * 9].classList.add("big-card");
+      }
+      if (visibleArticlesCards[4 + i * 9]) {
+        visibleArticlesCards[4 + i * 9].classList.add("big-card");
+      }
+      if (visibleArticlesCards[8 + i * 9]) {
+        visibleArticlesCards[8 + i * 9].classList.add("big-card");
+      }
+    }
   }
 
   showArticles();

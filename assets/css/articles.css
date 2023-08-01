@@ -357,6 +357,10 @@ img {
   height: 120px;
 }
 
+.arcticles-card.big-card {
+  max-width: 526px;
+}
+
 .articles-card__image {
   z-index: -1;
   position: absolute;
