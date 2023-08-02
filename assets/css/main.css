@@ -1619,6 +1619,13 @@ a.tabs-button {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+  .arcticles-card.big-card {
+    max-width: 361px;
+  }
+  .cosmetics-slider .slick-arrow,
+  .news-slider .slick-arrow {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1691,6 +1698,12 @@ a.tabs-button {
   }
   .youtube {
     padding-top: 50px;
+  }
+  .news-slider .slick-list {
+    padding-top: 33px;
+  }
+  .news-slider {
+    margin-bottom: 70px;
   }
 }
 
@@ -1806,6 +1819,20 @@ a.tabs-button {
   }
   .youtube-subtitle {
     top: 35px;
+  }
+  .articles {
+    margin-top: 70px;
+  }
+  .articles-box {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 2500px;
+    overflow-x: auto;
+  }
+  .arcticles-card,
+  .arcticles-card.big-card {
+    max-width: 416px;
   }
 }
 

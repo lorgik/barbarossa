@@ -228,6 +228,17 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
     draggable: false,
     swipe: true,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplay: false,
+        },
+      },
+    ],
   });
 });
 
