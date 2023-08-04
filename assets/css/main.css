@@ -569,7 +569,6 @@ img {
   scroll-snap-align: start;
   border-radius: 10px;
   background: var(--color-main-white);
-  min-width: 306px;
   height: 465px;
 
   padding: 25px;
@@ -1484,6 +1483,15 @@ a.tabs-button {
   transition: box-shadow 0.2s ease-in-out;
 }
 
+.articles-slider .slick-slide {
+  margin: 0 12px;
+}
+
+.articles-slider .slick-list {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
 /* Слайд активный (показывается) */
 .cosmetics-slider .slick-active {
   box-shadow: 0px 10px 25px 0px rgba(85, 85, 85, 0.1);
@@ -1514,14 +1522,22 @@ a.tabs-button {
 /* Стрелка влево */
 .cosmetics-slider .slick-arrow.slick-prev,
 .news-slider .slick-arrow.slick-prev {
-  left: -55px;
+  left: -45px;
   background-image: url("../images/arrow-left-disabled.svg");
 }
 /* Стрелка вправо */
 .cosmetics-slider .slick-arrow.slick-next,
 .news-slider .slick-arrow.slick-next {
-  right: -55px;
+  right: -45px;
   background-image: url("../images/arrow-right-disabled.svg");
+}
+
+.news-slider .slick-arrow.slick-prev {
+  left: -55px;
+}
+
+.news-slider .slick-arrow.slick-next {
+  right: -55px;
 }
 
 .cosmetics-slider .slick-arrow.slick-prev:hover,
@@ -1532,6 +1548,19 @@ a.tabs-button {
 .cosmetics-slider .slick-arrow.slick-next:hover,
 .news-slider .slick-arrow.slick-next:hover {
   background-image: url("../images/arrow-right.svg");
+}
+
+@media screen and (max-width: 1400px) {
+  .cosmetics-slider {
+    max-width: 1140px;
+  }
+  .cosmetics__card-image {
+    width: 180px;
+    height: 150px;
+  }
+  .cosmetics__card {
+    height: unset;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -1580,6 +1609,14 @@ a.tabs-button {
   .youtube {
     margin-top: 50px;
     padding-top: 100px;
+  }
+  .cosmetics-slider,
+  .news-slider {
+    max-width: 960px;
+  }
+  .news-card {
+    max-width: none;
+    height: unset;
   }
 }
 
@@ -1644,6 +1681,13 @@ a.tabs-button {
   .cosmetics-slider .slick-arrow,
   .news-slider .slick-arrow {
     display: none !important;
+  }
+  .cosmetics-slider {
+    max-width: 720px;
+  }
+  .cosmetics__card-prices {
+    flex-wrap: wrap;
+    margin-top: 10px;
   }
 }
 
@@ -1723,6 +1767,9 @@ a.tabs-button {
   }
   .news-slider {
     margin-bottom: 70px;
+  }
+  .cosmetics-slider {
+    max-width: 540px;
   }
 }
 
@@ -1827,7 +1874,7 @@ a.tabs-button {
     height: 14px;
   }
   .youtube-videos {
-    margin-top: 40px;
+    margin-top: 72px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(6, 1fr);
   }
@@ -1844,14 +1891,42 @@ a.tabs-button {
   }
   .articles-box {
     margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 2500px;
-    overflow-x: auto;
   }
   .arcticles-card,
   .arcticles-card.big-card {
     max-width: 416px;
+  }
+  .cosmetics__card-oldprice {
+    right: 7px;
+    bottom: 15px;
+  }
+  .cosmetics-slider,
+  .news-slider,
+  .articles-slider {
+    max-width: 100%;
+  }
+  .cosmetics-slider .slick-list {
+    margin-left: -48px;
+  }
+  .news-slider .slick-list {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 33px;
+  }
+  .news-card,
+  .arcticles-card {
+    height: 220px;
+    padding: 0 20px;
+  }
+  .articles-card__title,
+  .news-card__title {
+    margin-top: 110px;
+  }
+  .articles-card__date,
+  .news-card__date {
+    top: 15px;
+    right: 15px;
+    padding: 10px 14px;
   }
 }
 

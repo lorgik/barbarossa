@@ -212,6 +212,35 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
     draggable: false,
     swipe: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+    ],
   });
 
   const newsCardsLength = document.querySelectorAll(".news-card").length;
@@ -224,21 +253,68 @@ $(document).ready(function () {
     speed: 400,
     easing: "ease-in-out",
     infinite: true,
-    autoplay: true,
+    // autoplay: false,
     autoplaySpeed: 3000,
     draggable: false,
     swipe: true,
     responsive: [
       {
-        breakpoint: 576,
+        breakpoint: 1400,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
           slidesToScroll: 1,
-          autoplay: false,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
         },
       },
     ],
+  });
+
+  let windowInnerWidth = document.documentElement.clientWidth;
+  if (windowInnerWidth <= 576) {
+    const articlesSlider = document.querySelector(".articles-box");
+    articlesSlider.classList.add("articles-slider");
+  }
+
+  $(".articles-slider").slick({
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 2,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    // autoplay: false,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
   });
 });
 
