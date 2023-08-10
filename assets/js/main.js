@@ -234,7 +234,7 @@ $(document).ready(function () {
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
           slidesToScroll: 1,
           autoplaySpeed: 5000,
