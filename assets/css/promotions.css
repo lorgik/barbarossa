@@ -632,10 +632,6 @@ img {
   margin: 0 12px;
 }
 
-/* Слайд активный (показывается) */
-.cosmetics-slider .slick-active {
-}
-
 /* Стрелка */
 .promotions-slider .slick-arrow {
   position: absolute;
