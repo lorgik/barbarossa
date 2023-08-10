@@ -1593,6 +1593,10 @@ a.tabs-button {
     align-items: center;
     justify-content: center;
   }
+  .submenu__list {
+    padding: unset;
+    top: 35px;
+  }
   .statistics {
     height: 170px;
   }

@@ -624,12 +624,12 @@ img {
 }
 /* Стрелка влево */
 .promotions-slider .slick-arrow.slick-prev {
-  left: -100px;
+  left: -65px;
   background-image: url("../images/arrow-left-disabled.svg");
 }
 /* Стрелка вправо */
 .promotions-slider .slick-arrow.slick-next {
-  right: -100px;
+  right: -65px;
   background-image: url("../images/arrow-right-disabled.svg");
 }
 
