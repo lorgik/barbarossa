@@ -117,9 +117,9 @@ if (tabsLinks.length > 0) {
         tab.classList.add("active");
       }
 
-      showArticles();
+      console.log(currentHash);
 
-      e.preventDefault();
+      showArticles();
     });
   });
 
