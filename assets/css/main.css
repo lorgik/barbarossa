@@ -121,6 +121,10 @@ img {
   transition: background-color 0.2s linear;
 }
 
+.header-button {
+  display: none;
+}
+
 .header-logo__link {
   margin-top: 22px;
   display: inline-block;
@@ -1404,7 +1408,7 @@ a.tabs-button {
 }
 
 .booking-icon {
-  z-index: 100;
+  z-index: 50;
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -1551,6 +1555,8 @@ a.tabs-button {
     font-size: 14px;
   }
   .header-button {
+    z-index: 1;
+    display: inline-block;
     width: 56px;
     height: 56px;
     background-color: var(--color-secondary-black);
@@ -1584,8 +1590,8 @@ a.tabs-button {
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
   }
   .statistics {
     height: 170px;
@@ -1708,6 +1714,10 @@ a.tabs-button {
   .cosmetics-slider .slick-arrow,
   .news-slider .slick-arrow {
     display: none !important;
+  }
+  .news-card:hover,
+  .arcticles-card:hover {
+    transform: none;
   }
   .cosmetics-slider {
     max-width: 720px;
@@ -2043,6 +2053,9 @@ a.tabs-button {
 @media screen and (max-width: 390px) {
   .title {
     font-size: 2.5rem;
+  }
+  .main-title {
+    font-size: 2.8rem;
   }
   .youtube-title {
     max-width: 250px;
