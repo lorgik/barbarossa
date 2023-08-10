@@ -98,7 +98,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-const tabsLinks = document.querySelectorAll(".tabs__list-link");
+const tabsLinks = Array.from(document.querySelectorAll(".tabs__list-link"));
 if (tabsLinks.length > 0) {
   tabsLinks[0].classList.add("active");
 
@@ -119,7 +119,7 @@ if (tabsLinks.length > 0) {
     });
   });
 
-  const arcticlesCard = document.querySelectorAll(".arcticles-card");
+  const arcticlesCard = Array.from(document.querySelectorAll(".arcticles-card"));
 
   function showArticles() {
     arcticlesCard.forEach(function (card) {
@@ -134,7 +134,7 @@ if (tabsLinks.length > 0) {
       }
     });
 
-    const visibleArticlesCards = document.querySelectorAll(".arcticles-card.visible");
+    const visibleArticlesCards = Array.from(document.querySelectorAll(".arcticles-card.visible"));
 
     for (let i = 0; i < visibleArticlesCards.length / 9; i++) {
       if (visibleArticlesCards[0 + i * 9]) {
