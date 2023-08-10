@@ -150,7 +150,9 @@ if (tabsLinks.length > 0) {
   }
 }
 
-showArticles();
+document.addEventListener("DOMContentLoaded", function () {
+  showArticles();
+});
 
 let scrollpos = window.scrollY;
 
