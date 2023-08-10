@@ -1571,6 +1571,7 @@ a.tabs-button {
 
   .menu__list.active .menu__list-item {
     display: block;
+    font-size: 1.5rem;
   }
   .menu__list.active {
     z-index: 1;
@@ -1578,12 +1579,12 @@ a.tabs-button {
     top: 0;
     right: 0;
     left: 0;
-    height: 100dvh;
+    height: 100vh;
     background-color: var(--color-main-black);
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-start;
   }
   .statistics {
@@ -1642,7 +1643,7 @@ a.tabs-button {
   }
   .popup__content {
     align-items: flex-start;
-    height: 90dvh;
+    height: 90vh;
   }
 }
 
@@ -2029,6 +2030,9 @@ a.tabs-button {
   }
   .links-button--whatsapp::before {
     left: 11px;
+  }
+  .links-button--vkontakte::before {
+    left: 9px;
   }
   .footer-top {
     flex-direction: column;
