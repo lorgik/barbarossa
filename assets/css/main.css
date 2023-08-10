@@ -1823,6 +1823,9 @@ a.tabs-button {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .footer-links__phone--subtitle {
+    display: none;
+  }
   .footer-links {
     max-width: 340px;
   }
@@ -2038,11 +2041,14 @@ a.tabs-button {
   .footer-privacy {
     margin-top: 30px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
   }
   .footer-copyright {
     margin-top: 30px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
   .links-button {
     font-size: 0;
@@ -2076,10 +2082,5 @@ a.tabs-button {
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-  .footer-copyright {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 15px;
   }
 }
