@@ -617,7 +617,8 @@ img {
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
-  width: 100%;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 
 /* Лента слайдов */
