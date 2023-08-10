@@ -258,11 +258,11 @@ img {
   transition: all 0.2s ease-in-out;
 }
 
-.submenu___list-link {
+.submenu__list-link {
   transition: color 0.2s ease-in-out;
 }
 
-.submenu___list-link:hover {
+.submenu__list-link:hover {
   color: var(--color-main-orange);
 }
 
@@ -1746,6 +1746,9 @@ a.tabs-button {
     width: 113px;
     height: 94px;
   }
+  .header-logo__link {
+    margin-top: 16px;
+  }
   .main-bg {
     height: 625px;
   }
@@ -1794,9 +1797,7 @@ a.tabs-button {
     margin-top: 50px;
     border-radius: 60px 60px 0 0;
   }
-  .header-logo__link {
-    margin-top: 16px;
-  }
+
   .gallery-slider__container {
     left: 100px;
   }

@@ -98,50 +98,6 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-const tabsLinks = document.querySelectorAll(".tabs__list-link");
-if (tabsLinks.length > 0) {
-  tabsLinks[0].classList.add("active");
-
-  const activeLink = document.querySelector(".tabs__list-link.active");
-
-  let currentHash = activeLink.dataset.hash;
-
-  tabsLinks.forEach(function (tab) {
-    tab.addEventListener("click", function (e) {
-      if (currentHash !== tab.dataset.hash) {
-        tabsLinks.forEach(function (tab) {
-          tab.classList.remove("active");
-        });
-
-        currentHash = tab.dataset.hash;
-        tab.classList.add("active");
-      }
-
-      showArticles();
-
-      e.preventDefault();
-    });
-  });
-
-  const arcticlesCard = document.querySelectorAll(".articles-link");
-
-  function showArticles() {
-    arcticlesCard.forEach(function (card) {
-      if (card.classList.contains("visible")) {
-        card.classList.remove("visible");
-      }
-    });
-
-    arcticlesCard.forEach(function (card) {
-      if (card.dataset.hashCard === currentHash || currentHash === "#все") {
-        card.classList.add("visible");
-      }
-    });
-  }
-
-  showArticles();
-}
-
 let scrollpos = window.scrollY;
 
 const header = document.querySelector(".header");
@@ -177,5 +133,59 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
     draggable: false,
     swipe: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+    ],
   });
 });
+
+let windowInnerWidth = document.documentElement.clientWidth;
+
+if (windowInnerWidth <= 1200) {
+  const menu = document.querySelector(".menu__list");
+
+  let menuBtn = document.querySelector(".header-button");
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+  menu.addEventListener("click", function (e) {
+    if (!e.target.closest(".menu__list-item")) {
+      menu.classList.toggle("active");
+    }
+  });
+}
