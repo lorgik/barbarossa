@@ -97,3 +97,41 @@ document.addEventListener("keydown", function (e) {
     popupClose(popupActive);
   }
 });
+
+let scrollpos = window.scrollY;
+
+const header = document.querySelector(".header");
+
+const scrollChange = 27;
+
+if (scrollpos >= scrollChange) {
+  header.classList.add("fit-no-transition");
+}
+
+window.addEventListener("scroll", function () {
+  scrollpos = window.scrollY;
+
+  if (scrollpos >= scrollChange) {
+    header.classList.add("fit");
+  }
+  if (scrollpos === 0) {
+    header.classList.remove("fit");
+    header.classList.remove("fit-no-transition");
+  }
+});
+
+let windowInnerWidth = document.documentElement.clientWidth;
+
+if (windowInnerWidth <= 1200) {
+  const menu = document.querySelector(".menu__list");
+
+  let menuBtn = document.querySelector(".header-button");
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+  menu.addEventListener("click", function (e) {
+    if (!e.target.closest(".menu__list-item")) {
+      menu.classList.toggle("active");
+    }
+  });
+}

@@ -252,3 +252,17 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fit-no-transition");
   }
 });
+
+if (windowInnerWidth <= 1200) {
+  const menu = document.querySelector(".menu__list");
+
+  let menuBtn = document.querySelector(".header-button");
+  menuBtn.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+  menu.addEventListener("click", function (e) {
+    if (!e.target.closest(".menu__list-item")) {
+      menu.classList.toggle("active");
+    }
+  });
+}
