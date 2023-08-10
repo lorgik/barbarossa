@@ -1401,10 +1401,12 @@ a.tabs-button {
 
 .popup-arrow__left {
   left: 0;
+  background-image: url("../images/arrow-left-white.svg");
 }
 
 .popup-arrow__right {
   right: 0;
+  background-image: url("../images/arrow-right-white.svg");
 }
 
 .booking-icon {

@@ -107,7 +107,7 @@ if (tabsLinks.length > 0) {
   let currentHash = activeLink.dataset.hash;
 
   tabsLinks.forEach(function (tab) {
-    tab.addEventListener("click", function (e) {
+    tab.addEventListener("click", function () {
       if (currentHash !== tab.dataset.hash) {
         tabsLinks.forEach(function (tab) {
           tab.classList.remove("active");
