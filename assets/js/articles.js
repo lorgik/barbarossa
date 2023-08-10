@@ -148,11 +148,8 @@ if (tabsLinks.length > 0) {
       }
     }
   }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
   showArticles();
-});
+}
 
 let scrollpos = window.scrollY;
 
