@@ -584,6 +584,8 @@ img {
   right: 0;
   background-color: #000;
   object-fit: cover;
+  width: inherit;
+  aspect-ratio: 5.4 / 3.3;
 }
 
 .main-card__date {
