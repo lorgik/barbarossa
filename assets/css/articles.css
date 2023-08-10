@@ -263,6 +263,7 @@ img {
 .submenu__list-link:hover {
   color: var(--color-main-orange);
 }
+
 .breadcrumb ul {
   display: flex;
   flex-wrap: wrap;
