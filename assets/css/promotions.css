@@ -780,6 +780,13 @@ img {
   .promotions-box {
     margin-bottom: 80px;
   }
+  .promotions-card {
+    height: unset;
+    aspect-ratio: 1 / 1;
+  }
+  .promotions-title {
+    text-align: center;
+  }
   .booking-icon {
     right: 20px;
     bottom: 20px;
