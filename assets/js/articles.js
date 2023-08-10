@@ -102,9 +102,7 @@ const tabsLinks = document.querySelectorAll(".tabs__list-link");
 if (tabsLinks.length > 0) {
   tabsLinks[0].classList.add("active");
 
-  const activeLink = document.querySelector(".tabs__list-link.active");
-
-  let currentHash = activeLink.dataset.hash;
+  let currentHash = tabsLinks[0].dataset.hash;
 
   tabsLinks.forEach(function (tab) {
     tab.addEventListener("click", function () {
@@ -117,28 +115,20 @@ if (tabsLinks.length > 0) {
         tab.classList.add("active");
       }
 
-      console.log(currentHash);
-
       showArticles();
     });
   });
 
-  const arcticlesCard = document.querySelectorAll(".articles-link");
+  const arcticlesCard = document.querySelectorAll(".arcticles-card");
 
   function showArticles() {
     arcticlesCard.forEach(function (card) {
       if (card.classList.contains("visible")) {
         card.classList.remove("visible");
       }
-    });
-
-    arcticlesCard.forEach(function (card) {
       if (card.dataset.hashCard === currentHash || currentHash === "#все") {
         card.classList.add("visible");
       }
-    });
-
-    arcticlesCard.forEach(function (card) {
       if (card.classList.contains("big-card")) {
         card.classList.remove("big-card");
       }
@@ -158,9 +148,9 @@ if (tabsLinks.length > 0) {
       }
     }
   }
-
-  showArticles();
 }
+
+showArticles();
 
 let scrollpos = window.scrollY;
 
