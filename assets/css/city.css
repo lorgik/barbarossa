@@ -2061,7 +2061,6 @@ a.tabs-button {
   .arcticles-card.big-card {
     max-width: 361px;
   }
-  .cosmetics-slider .slick-arrow,
   .news-slider .slick-arrow {
     display: none !important;
   }
@@ -2328,9 +2327,6 @@ a.tabs-button {
     top: 13px;
     right: 15px;
   }
-  .slick-list {
-    padding-bottom: 25px !important;
-  }
   .services {
     margin-top: 0;
   }
@@ -2535,6 +2531,15 @@ a.tabs-button {
   .promotions-slider .slick-list {
     margin-left: -24px;
     margin-right: -24px;
+  }
+  .cosmetics-slider .slick-arrow.slick-prev {
+    left: 10px;
+  }
+  .cosmetics-slider .slick-arrow.slick-next {
+    right: 10px;
+  }
+  .cosmetics-slider .slick-slide {
+    box-shadow: none;
   }
 }
 

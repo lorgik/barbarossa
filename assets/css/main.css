@@ -1741,7 +1741,6 @@ a.tabs-button {
   .arcticles-card.big-card {
     max-width: 361px;
   }
-  .cosmetics-slider .slick-arrow,
   .news-slider .slick-arrow {
     display: none !important;
   }
@@ -2117,6 +2116,15 @@ a.tabs-button {
   .articles-slider .slick-list {
     margin-left: -24px;
     margin-right: -24px;
+  }
+  .cosmetics-slider .slick-arrow.slick-prev {
+    left: 10px;
+  }
+  .cosmetics-slider .slick-arrow.slick-next {
+    right: 10px;
+  }
+  .cosmetics-slider .slick-slide {
+    box-shadow: none;
   }
 }
 
