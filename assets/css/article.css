@@ -1039,15 +1039,14 @@ a.tabs-button {
   .footer-privacy {
     margin-top: 30px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
   }
   .footer-copyright {
     margin-top: 30px;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-    text-align: center;
+    align-items: flex-start;
   }
   .links-button {
     font-size: 0;
@@ -1065,6 +1064,11 @@ a.tabs-button {
   .footer-top {
     flex-direction: column;
     gap: 25px;
+    align-items: flex-start;
+  }
+  .footer-links__box--socials {
+    justify-content: flex-start;
+    gap: 20px;
   }
   .popup__barbershop {
     padding: 70px 30px;
