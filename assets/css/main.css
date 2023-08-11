@@ -318,6 +318,19 @@ img {
   position: absolute;
 }
 
+.video-cirlce {
+  animation: rotation infinite 10s linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 .video-button {
   transition: transform 0.2s ease-in-out;
 }
@@ -1783,6 +1796,7 @@ a.tabs-button {
     width: inherit;
     height: inherit;
   }
+
   .video-button {
     width: inherit;
     height: inherit;
@@ -1857,7 +1871,7 @@ a.tabs-button {
   .main-video {
     width: 150px;
     height: 150px;
-    right: 0;
+    right: -25px;
     left: unset;
   }
   .statistics {
@@ -2142,5 +2156,10 @@ a.tabs-button {
   .cosmetics__card-button {
     font-size: 1rem;
     margin-top: 10px;
+  }
+  .gallery-subtitle {
+    font-size: 0.875rem;
+  }
+  .cosmetics-slider .slick-list {
   }
 }

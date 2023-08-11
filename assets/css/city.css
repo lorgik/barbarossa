@@ -2173,7 +2173,7 @@ a.tabs-button {
   .main-video {
     width: 150px;
     height: 150px;
-    right: 0;
+    right: -25px;
     left: unset;
   }
   .info {
@@ -2528,5 +2528,8 @@ a.tabs-button {
   .cosmetics__card-button {
     font-size: 1rem;
     margin-top: 10px;
+  }
+  .gallery-subtitle {
+    font-size: 0.875rem;
   }
 }
