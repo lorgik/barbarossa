@@ -489,7 +489,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: auto;
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
@@ -503,6 +503,133 @@ img {
   visibility: visible;
 }
 
+.popup a {
+  color: var(--color-secondary-black);
+}
+
+.popup__content {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.popup__barbershop-left {
+  width: 100%;
+}
+
+.popup__barbershop-tabs {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.tabs-russia,
+.tabs-kazakhstan {
+  font-size: 1.0625rem;
+}
+
+a.tabs-button {
+  color: var(--color-main-white);
+  padding: 17px 20px;
+  border-radius: 10px;
+  font-size: 1.0625rem;
+  box-shadow: 0px 10px 40px 0px rgba(227, 93, 18, 0.2);
+}
+
+.popup__barbershop-form {
+  margin-top: 15px;
+  position: relative;
+  max-width: 511px;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  height: 64px;
+  background-color: #fbfbfb;
+  border-radius: 15px;
+  padding: 20px;
+  color: var(--color-secondary-black);
+}
+
+.form-close__button {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
+  background-size: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup__barbershop-cities {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow-y: scroll;
+  max-height: 400px;
+  max-width: 511px;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar {
+  width: 2px;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar-track {
+  background-color: #e8e8e8;
+}
+
+.popup__barbershop-cities::-webkit-scrollbar-thumb {
+  background-color: var(--color-main-orange);
+}
+
+.city-title {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+.city-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 17px;
+  font-size: 0.875rem;
+}
+
+.city-box::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-main-orange);
+}
+
+.city-box__title {
+  font-weight: 700;
+}
+
+.popup__barbershop-map {
+  background-color: #fff;
+  background-image: url("../images/map-bg.jpg");
+  width: 100%;
+  height: 100%;
+  max-height: 625px;
+  border-radius: 40px;
+}
+
 .popup__close {
   z-index: -1;
   position: absolute;
@@ -511,11 +638,32 @@ img {
   cursor: unset;
 }
 
+.popup__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
+  background-size: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup__close-icon:hover,
+.form-close__button:hover {
+  transform: scale(1.2);
+}
+
 .popup__barbershop {
   position: relative;
-  padding: 70px 50px 33px 50px;
+  padding: 70px 50px;
 
-  height: 765px;
+  height: 90dvh;
   background-color: var(--color-main-white);
   color: var(--color-secondary-black);
   border-radius: 40px;
@@ -524,7 +672,8 @@ img {
   transition: transform 0.3s ease-in-out;
 }
 
-.popup.open .popup__barbershop {
+.popup.open .popup__barbershop,
+.popup.open .popup__gallery {
   transform: translate(0px, 0px);
 }
 
@@ -724,8 +873,9 @@ img {
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    align-items: center;
-    justify-content: center;
+    padding-top: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .submenu__list {
     padding: unset;
@@ -744,6 +894,9 @@ img {
   .booking-icon {
     width: 125px;
     height: 125px;
+  }
+  .popup__barbershop-map {
+    display: none;
   }
 }
 
@@ -847,6 +1000,19 @@ img {
     flex-direction: column;
     gap: 25px;
   }
+  .popup__barbershop {
+    padding: 70px 30px;
+  }
+  .popup__close-icon {
+    right: 20px;
+    top: 20px;
+  }
+  .popup__barbershop-tabs {
+    gap: 30px;
+  }
+  a.tabs-button {
+    padding: 12px 14px;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -857,5 +1023,8 @@ img {
   .footer {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+  .popup__barbershop-tabs {
+    gap: 20px;
   }
 }

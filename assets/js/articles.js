@@ -98,58 +98,60 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// const tabsLinks = Array.from(document.querySelectorAll(".tabs__list-link"));
-// if (tabsLinks.length > 0) {
-//   tabsLinks[0].classList.add("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const tabsLinks = Array.from(document.querySelectorAll(".tabs__list-link"));
+  if (tabsLinks.length > 0) {
+    tabsLinks[0].classList.add("active");
 
-//   let currentHash = tabsLinks[0].dataset.hash;
+    let currentHash = tabsLinks[0].dataset.hash;
 
-//   tabsLinks.forEach(function (tab) {
-//     tab.addEventListener("click", function () {
-//       if (currentHash !== tab.dataset.hash) {
-//         tabsLinks.forEach(function (tab) {
-//           tab.classList.remove("active");
-//         });
+    tabsLinks.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        if (currentHash !== tab.dataset.hash) {
+          tabsLinks.forEach(function (tab) {
+            tab.classList.remove("active");
+          });
 
-//         currentHash = tab.dataset.hash;
-//         tab.classList.add("active");
-//       }
+          currentHash = tab.dataset.hash;
+          tab.classList.add("active");
+        }
 
-//       showArticles();
-//     });
-//   });
+        showArticles();
+      });
+    });
 
-//   const arcticlesCard = Array.from(document.querySelectorAll(".arcticles-card"));
+    const arcticlesCard = Array.from(document.querySelectorAll(".arcticles-card"));
 
-//   function showArticles() {
-//     arcticlesCard.forEach(function (card) {
-//       if (card.classList.contains("visible")) {
-//         card.classList.remove("visible");
-//       }
-//       if (card.dataset.hashCard === currentHash || currentHash === "#все") {
-//         card.classList.add("visible");
-//       }
-//       if (card.classList.contains("big-card")) {
-//         card.classList.remove("big-card");
-//       }
-//     });
+    function showArticles() {
+      arcticlesCard.forEach(function (card) {
+        if (card.classList.contains("visible")) {
+          card.classList.remove("visible");
+        }
+        if (card.dataset.hashCard === currentHash || currentHash === "#все") {
+          card.classList.add("visible");
+        }
+        if (card.classList.contains("big-card")) {
+          card.classList.remove("big-card");
+        }
+      });
 
-//     const visibleArticlesCards = Array.from(document.querySelectorAll(".arcticles-card.visible"));
+      const visibleArticlesCards = Array.from(document.querySelectorAll(".arcticles-card.visible"));
 
-//     for (let i = 0; i < visibleArticlesCards.length / 9; i++) {
-//       if (visibleArticlesCards[0 + i * 9]) {
-//         visibleArticlesCards[0 + i * 9].classList.add("big-card");
-//       }
-//       if (visibleArticlesCards[4 + i * 9]) {
-//         visibleArticlesCards[4 + i * 9].classList.add("big-card");
-//       }
-//       if (visibleArticlesCards[8 + i * 9]) {
-//         visibleArticlesCards[8 + i * 9].classList.add("big-card");
-//       }
-//     }
-//   }
-//   showArticles();
-// }
+      for (let i = 0; i < visibleArticlesCards.length / 9; i++) {
+        if (visibleArticlesCards[0 + i * 9]) {
+          visibleArticlesCards[0 + i * 9].classList.add("big-card");
+        }
+        if (visibleArticlesCards[4 + i * 9]) {
+          visibleArticlesCards[4 + i * 9].classList.add("big-card");
+        }
+        if (visibleArticlesCards[8 + i * 9]) {
+          visibleArticlesCards[8 + i * 9].classList.add("big-card");
+        }
+      }
+    }
+    showArticles();
+  }
+});
 
 let scrollpos = window.scrollY;
 
@@ -171,6 +173,7 @@ window.addEventListener("scroll", function () {
     header.classList.remove("fit");
     header.classList.remove("fit-no-transition");
   }
+  console.log(scrollpos);
 });
 
 let windowInnerWidth = document.documentElement.clientWidth;
