@@ -1023,6 +1023,7 @@ img {
   align-items: center;
   justify-content: space-between;
   font-size: 1.125rem;
+  gap: 20px;
 }
 
 .footer-links__phone {
@@ -1605,7 +1606,9 @@ a.tabs-button {
   .submenu__list {
     padding: unset;
     top: 35px;
-    align-items: center;
+    left: 0;
+    align-items: flex-start;
+    gap: 15px;
   }
   .statistics {
     height: 170px;
@@ -2075,7 +2078,6 @@ a.tabs-button {
   }
   .footer-links__box--socials {
     justify-content: flex-start;
-    gap: 20px;
   }
   .popup__barbershop {
     padding: 70px 30px;

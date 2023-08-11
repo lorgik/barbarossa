@@ -1888,7 +1888,9 @@ a.tabs-button {
   .submenu__list {
     padding: unset;
     top: 35px;
-    align-items: center;
+    left: 0;
+    align-items: flex-start;
+    gap: 15px;
   }
   .info {
     height: 170px;
