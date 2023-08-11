@@ -955,7 +955,7 @@ a.tabs-button {
 @media screen and (max-width: 576px) {
   .main {
     border-radius: 60px 60px 0 0;
-    margin-bottom: 300px;
+    margin-bottom: 320px;
   }
   .contacts-box {
     bottom: -350px;

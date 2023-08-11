@@ -1841,7 +1841,7 @@ a.tabs-button {
 
 @media screen and (max-width: 576px) {
   .main-bg {
-    height: 670px;
+    height: 750px;
     object-position: -300px;
     object-fit: none;
   }
@@ -1899,7 +1899,7 @@ a.tabs-button {
     bottom: 20px;
   }
   .gallery {
-    margin-top: -310px;
+    margin-top: -275px;
   }
   .gallery-title {
     margin-top: 420px;
@@ -1913,16 +1913,13 @@ a.tabs-button {
     margin-top: 30px;
   }
   .gallery-slider__container {
-    left: 10px;
+    left: 24px;
   }
   .progress-bar {
     width: 200px;
   }
   .cosmetics__slider-container {
     margin-top: 10px;
-  }
-  .cosmetics {
-    margin-top: 80px;
   }
   .cosmetics__card {
     padding: 15px;
@@ -1939,6 +1936,10 @@ a.tabs-button {
   .cosmetics__card-image {
     width: max-content;
   }
+  .cosmetics__card-prices {
+    flex-direction: column;
+  }
+
   .cosmetics__card-button {
     margin-left: 0;
     margin-top: 5px;
@@ -1951,7 +1952,7 @@ a.tabs-button {
     padding-bottom: 25px !important;
   }
   .black-bg {
-    margin-top: 30px;
+    margin-top: 80px;
     border-radius: 60px;
   }
   .youtube {
@@ -1989,9 +1990,7 @@ a.tabs-button {
   .youtube-video {
     height: unset;
   }
-  .articles {
-    margin-top: 70px;
-  }
+
   .articles-box {
     margin-top: 25px;
   }
@@ -2003,6 +2002,7 @@ a.tabs-button {
   .cosmetics__card-oldprice {
     right: 7px;
     bottom: 15px;
+    display: none;
   }
   .cosmetics-slider,
   .news-slider,
@@ -2032,15 +2032,10 @@ a.tabs-button {
     right: 15px;
     padding: 10px 14px;
   }
-  .news {
-    margin-top: 80px;
-  }
   .map-container {
     margin-bottom: 80px;
   }
-  .map-title {
-    margin-top: 80px;
-  }
+
   .map-subtitle {
     right: unset;
   }

@@ -241,6 +241,16 @@ $(document).ready(function () {
           arrows: false,
         },
       },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+          arrows: false,
+        },
+      },
     ],
   });
 
@@ -292,7 +302,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
           slidesToScroll: 1,
-          autoplaySpeed: 5000,
+          autoplaySpeed: 3000,
           arrows: false,
         },
       },

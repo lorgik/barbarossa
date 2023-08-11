@@ -2160,7 +2160,7 @@ a.tabs-button {
 
 @media screen and (max-width: 576px) {
   .main-bg {
-    height: 670px;
+    height: 750px;
     object-position: -300px;
     object-fit: none;
   }
@@ -2229,7 +2229,7 @@ a.tabs-button {
     bottom: 20px;
   }
   .gallery {
-    margin-top: -310px;
+    margin-top: -275px;
   }
   .gallery-title {
     margin-top: 420px;
@@ -2243,7 +2243,7 @@ a.tabs-button {
     margin-top: 30px;
   }
   .gallery-slider__container {
-    left: 10px;
+    left: 24px;
   }
   .progress-bar {
     width: 200px;
@@ -2269,6 +2269,9 @@ a.tabs-button {
   .cosmetics__card-image {
     width: max-content;
   }
+  .cosmetics__card-prices {
+    flex-direction: column;
+  }
   .cosmetics__card-button {
     margin-left: 0;
     margin-top: 5px;
@@ -2279,6 +2282,9 @@ a.tabs-button {
   }
   .slick-list {
     padding-bottom: 25px !important;
+  }
+  .services {
+    margin-top: 0;
   }
   .services__table {
     width: 100%;
@@ -2303,9 +2309,7 @@ a.tabs-button {
     height: unset;
     aspect-ratio: 5.2 / 6.2;
   }
-  .promotions-title {
-    margin-top: 80px;
-  }
+
   .black-bg {
     margin-top: 80px;
     border-radius: 60px;
@@ -2335,7 +2339,7 @@ a.tabs-button {
   }
   .youtube {
     margin-top: 0;
-    padding-top: 70px;
+    padding-top: 100px;
   }
 
   .youtube-button {
@@ -2368,9 +2372,7 @@ a.tabs-button {
   .youtube-video {
     height: unset;
   }
-  .articles {
-    margin-top: 70px;
-  }
+
   .articles-box {
     margin-top: 25px;
   }
@@ -2382,6 +2384,7 @@ a.tabs-button {
   .cosmetics__card-oldprice {
     right: 7px;
     bottom: 15px;
+    display: none;
   }
   .cosmetics-slider,
   .news-slider,
@@ -2411,14 +2414,11 @@ a.tabs-button {
     right: 15px;
     padding: 10px 14px;
   }
-  .news {
-    margin-top: 80px;
-  }
+
   .map-container {
     margin-bottom: 80px;
   }
   .map-title {
-    margin-top: 80px;
     font-size: 3rem;
   }
   .map-subtitle {
