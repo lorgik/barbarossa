@@ -386,9 +386,6 @@ img {
   max-width: 280px;
 }
 
-.info-card__link {
-}
-
 .info-card__image {
   position: absolute;
   z-index: 1;
