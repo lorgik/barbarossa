@@ -1841,8 +1841,8 @@ a.tabs-button {
 
 @media screen and (max-width: 576px) {
   .main-bg {
-    height: 660px;
-    object-position: -500px;
+    height: 670px;
+    object-position: -300px;
     object-fit: none;
   }
   .main__button-box {
