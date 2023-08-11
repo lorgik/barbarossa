@@ -990,6 +990,10 @@ a.tabs-button {
     padding-right: var(--bs-gutter-x, 1.75rem);
     padding-left: var(--bs-gutter-x, 1.75rem);
   }
+  .promotions-slider .slick-list {
+    margin-left: -24px;
+    margin-right: -24px;
+  }
 }
 
 @media screen and (max-width: 390px) {
