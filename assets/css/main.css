@@ -1884,7 +1884,7 @@ a.tabs-button {
   }
   .statistics-card__text {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     max-width: 220px;
   }
   .statistics-card__image {
@@ -2091,6 +2091,10 @@ a.tabs-button {
   }
   .popup__gallery {
     height: 50dvh;
+  }
+  .container {
+    padding-right: var(--bs-gutter-x, 1.75rem);
+    padding-left: var(--bs-gutter-x, 1.75rem);
   }
 }
 

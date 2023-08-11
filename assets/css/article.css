@@ -1079,6 +1079,10 @@ a.tabs-button {
   a.tabs-button {
     padding: 12px 14px;
   }
+  .container {
+    padding-right: var(--bs-gutter-x, 1.75rem);
+    padding-left: var(--bs-gutter-x, 1.75rem);
+  }
 }
 
 @media screen and (max-width: 390px) {

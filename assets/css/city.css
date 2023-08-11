@@ -1658,6 +1658,19 @@ a.tabs-button {
   transform: scale(1.05);
 }
 
+.show-map-icon {
+  z-index: 100;
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  width: 93px;
+  height: 93px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease-in-out;
+}
+
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -1971,6 +1984,10 @@ a.tabs-button {
     width: 125px;
     height: 125px;
   }
+  .show-map-icon {
+    width: 70px;
+    height: 70px;
+  }
   .gallery-slider__container {
     position: relative;
     margin-top: 20px;
@@ -2189,7 +2206,7 @@ a.tabs-button {
 
   .info-card__text {
     margin-top: 10px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     max-width: 220px;
   }
   .info-card__image {
@@ -2205,6 +2222,10 @@ a.tabs-button {
   }
   .booking-icon {
     right: 20px;
+    bottom: 20px;
+  }
+  .show-map-icon {
+    left: 20px;
     bottom: 20px;
   }
   .gallery {
@@ -2450,6 +2471,10 @@ a.tabs-button {
   }
   .popup__gallery {
     height: 50dvh;
+  }
+  .container {
+    padding-right: var(--bs-gutter-x, 1.75rem);
+    padding-left: var(--bs-gutter-x, 1.75rem);
   }
 }
 
