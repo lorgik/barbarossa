@@ -319,7 +319,7 @@ img {
 }
 
 .video-cirlce {
-  animation: rotation infinite 10s linear;
+  animation: rotation infinite 15s linear;
 }
 
 @keyframes rotation {
