@@ -2121,4 +2121,10 @@ a.tabs-button {
   .popup__barbershop-tabs {
     gap: 20px;
   }
+  .cosmetics__card {
+    padding: 30px 15px;
+  }
+  .cosmetics-slider .slick-active {
+    box-shadow: none;
+  }
 }
