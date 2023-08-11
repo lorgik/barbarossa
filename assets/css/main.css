@@ -1929,6 +1929,7 @@ a.tabs-button {
   }
   .cosmetics__card-title {
     margin-top: 20px;
+    text-align: center;
   }
   .cosmetics__card-desc {
     margin-top: 5px;
@@ -2126,5 +2127,18 @@ a.tabs-button {
   }
   .cosmetics-slider .slick-active {
     box-shadow: none;
+  }
+  .cosmetics__card-title {
+    font-size: 1.5rem;
+  }
+  .cosmetics__card-desc {
+    font-size: 1.1rem;
+  }
+  .cosmetics__card-price {
+    font-size: 1.5rem;
+  }
+  .cosmetics__card-button {
+    font-size: 1rem;
+    margin-top: 10px;
   }
 }
