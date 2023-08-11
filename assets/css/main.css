@@ -1871,7 +1871,7 @@ a.tabs-button {
   .main-video {
     width: 150px;
     height: 150px;
-    right: -25px;
+    right: -5px;
     left: unset;
   }
   .statistics {
@@ -1966,9 +1966,7 @@ a.tabs-button {
     top: 13px;
     right: 15px;
   }
-  .slick-list {
-    padding-bottom: 25px !important;
-  }
+
   .black-bg {
     margin-top: 80px;
     border-radius: 60px;
@@ -2022,8 +2020,9 @@ a.tabs-button {
     bottom: 15px;
     display: none;
   }
-  .cosmetics-slider,
+
   .news-slider,
+  .cosmetics-slider,
   .articles-slider {
     max-width: 100%;
   }
@@ -2141,9 +2140,7 @@ a.tabs-button {
   .cosmetics__card {
     padding: 30px 15px;
   }
-  .cosmetics-slider .slick-active {
-    box-shadow: none;
-  }
+
   .cosmetics__card-title {
     font-size: 1.5rem;
   }
@@ -2160,6 +2157,7 @@ a.tabs-button {
   .gallery-subtitle {
     font-size: 0.875rem;
   }
-  .cosmetics-slider .slick-list {
+  .cosmetics__card-image {
+    height: 120px;
   }
 }
