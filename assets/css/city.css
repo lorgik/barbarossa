@@ -1669,7 +1669,7 @@ a.tabs-button {
 }
 
 .booking-icon {
-  z-index: 100;
+  z-index: 50;
   position: fixed;
   right: 40px;
   bottom: 40px;
@@ -1687,7 +1687,7 @@ a.tabs-button {
 }
 
 .show-map-icon {
-  z-index: 100;
+  z-index: 50;
   position: fixed;
   left: 40px;
   bottom: 40px;
