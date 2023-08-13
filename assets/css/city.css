@@ -2547,6 +2547,9 @@ a.tabs-button {
   .title {
     font-size: 2.5rem;
   }
+  .main-title {
+    font-size: 2.7rem;
+  }
 
   .info-card__title {
     font-size: 1.75rem;
