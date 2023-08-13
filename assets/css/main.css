@@ -1993,12 +1993,17 @@ a.tabs-button {
   .cosmetics__card-title {
     margin-top: 20px;
     text-align: center;
+    font-size: 2.25rem;
   }
   .cosmetics__card-desc {
     margin-top: 5px;
+    font-size: 1.5rem;
   }
   .cosmetics__card-image {
     width: max-content;
+  }
+  .cosmetics__card-price {
+    font-size: 2rem;
   }
   .cosmetics__card-prices {
     flex-direction: column;
@@ -2007,9 +2012,10 @@ a.tabs-button {
   .cosmetics__card-button {
     margin-left: 0;
     margin-top: 5px;
+    font-size: 1.75rem;
   }
   .cosmetics__card-button::before {
-    top: 13px;
+    top: 20px;
     right: 15px;
   }
 
@@ -2214,5 +2220,8 @@ a.tabs-button {
   }
   .cosmetics__card-image {
     height: 120px;
+  }
+  .cosmetics__card-button::before {
+    top: 13px;
   }
 }
