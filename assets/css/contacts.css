@@ -873,6 +873,10 @@ a.tabs-button {
   .header-button:hover {
     transform: scale(1.1);
   }
+  .header-button.active {
+    background-image: url("../images/close-icon.svg");
+    background-size: 25%;
+  }
   .menu__list .menu__list-item {
     display: none;
   }

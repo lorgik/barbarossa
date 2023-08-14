@@ -185,12 +185,14 @@ if (windowInnerWidth <= 1200) {
   let menuBtn = document.querySelector(".header-button");
   menuBtn.addEventListener("click", function () {
     menu.classList.toggle("active");
+    menuBtn.classList.toggle("active");
     page.classList.toggle("overflow-hidden");
   });
-  menu.addEventListener("click", function (e) {
-    if (!e.target.closest(".menu__list-item")) {
-      menu.classList.toggle("active");
-      page.classList.toggle("overflow-hidden");
-    }
-  });
+  // menu.addEventListener("click", function (e) {
+  //   if (!e.target.closest(".menu__list-item")) {
+  //     menu.classList.toggle("active");
+  //     menuBtn.classList.toggle("active");
+  //     page.classList.toggle("overflow-hidden");
+  //   }
+  // });
 }
