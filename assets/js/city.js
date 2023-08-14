@@ -414,16 +414,20 @@ articlesCards[4].classList.add("big-card");
 
 let windowInnerWidth = document.documentElement.clientWidth;
 
+const page = document.querySelector("body");
+
 if (windowInnerWidth <= 1200) {
   const menu = document.querySelector(".menu__list");
 
   let menuBtn = document.querySelector(".header-button");
   menuBtn.addEventListener("click", function () {
     menu.classList.toggle("active");
+    page.classList.toggle("overflow-hidden");
   });
   menu.addEventListener("click", function (e) {
     if (!e.target.closest(".menu__list-item")) {
       menu.classList.toggle("active");
+      page.classList.toggle("overflow-hidden");
     }
   });
 }

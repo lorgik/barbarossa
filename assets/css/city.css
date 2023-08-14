@@ -32,6 +32,10 @@ body.lock {
   overflow: hidden;
 }
 
+body.overflow-hidden {
+  overflow-y: hidden;
+}
+
 a,
 a:hover {
   text-decoration: none;
@@ -139,6 +143,16 @@ img {
   height: 100%;
 }
 
+.header-logo__link--logo {
+  width: 113px;
+  height: 94px;
+}
+
+.header-logo__link--logo .header-logo {
+  width: inherit;
+  height: inherit;
+}
+
 .header-menu .container {
   display: flex;
   align-items: center;
@@ -175,6 +189,10 @@ img {
 
 .menu__list-item {
   font-size: 0.875rem;
+}
+
+.menu__list-item--logo {
+  display: none;
 }
 
 .menu__list-link {
@@ -1903,6 +1921,10 @@ a.tabs-button {
     display: flex;
     font-size: 1.5rem;
   }
+  .menu__list-item--logo {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
   .menu__list.active {
     z-index: 1;
     position: absolute;
@@ -1914,9 +1936,9 @@ a.tabs-button {
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    padding-top: 30px;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow-y: auto;
   }
   .submenu__list {
     padding: unset;
@@ -1994,6 +2016,30 @@ a.tabs-button {
   .popup__content {
     align-items: flex-start;
     height: 90vh;
+  }
+  .submenu__list {
+    visibility: visible;
+    opacity: 1;
+    position: initial;
+    margin-top: 10px;
+  }
+  .submenu {
+    align-items: flex-start;
+  }
+  .submenu__list-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+  }
+  .submenu__list-item::before {
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-main-orange);
+    left: 0;
   }
 }
 
@@ -2297,9 +2343,6 @@ a.tabs-button {
   .cosmetics__slider-container {
     margin-top: 10px;
   }
-  .cosmetics {
-    margin-top: 80px;
-  }
   .cosmetics__card {
     padding: 15px;
     display: flex;
@@ -2309,22 +2352,30 @@ a.tabs-button {
   .cosmetics__card-title {
     margin-top: 20px;
     text-align: center;
+    font-size: 2.25rem;
   }
   .cosmetics__card-desc {
     margin-top: 5px;
+    font-size: 1.5rem;
   }
   .cosmetics__card-image {
     width: max-content;
+    height: 230px;
+  }
+  .cosmetics__card-price {
+    font-size: 2rem;
   }
   .cosmetics__card-prices {
     flex-direction: column;
   }
+
   .cosmetics__card-button {
     margin-left: 0;
-    margin-top: 5px;
+    margin-top: 10px;
+    font-size: 1.5rem;
   }
   .cosmetics__card-button::before {
-    top: 13px;
+    top: 20px;
     right: 15px;
   }
   .services {
@@ -2565,11 +2616,11 @@ a.tabs-button {
   .popup__barbershop-tabs {
     gap: 20px;
   }
+  .gallery-subtitle {
+    font-size: 0.875rem;
+  }
   .cosmetics__card {
     padding: 30px 15px;
-  }
-  .cosmetics-slider .slick-active {
-    box-shadow: none;
   }
   .cosmetics__card-title {
     font-size: 1.5rem;
@@ -2584,7 +2635,10 @@ a.tabs-button {
     font-size: 1rem;
     margin-top: 10px;
   }
-  .gallery-subtitle {
-    font-size: 0.875rem;
+  .cosmetics__card-image {
+    height: 200px;
+  }
+  .cosmetics__card-button::before {
+    top: 13px;
   }
 }
