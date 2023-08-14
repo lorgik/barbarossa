@@ -511,8 +511,7 @@ img {
   height: auto;
   opacity: 0;
   visibility: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 
   transition: all 0.3s ease-in-out;
 }
@@ -697,7 +696,7 @@ a.popup__barbershop-button {
   border-radius: 40px;
   transform: translate(0px, 100%);
 
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .popup.open .popup__barbershop,
@@ -948,6 +947,10 @@ a.popup__barbershop-button {
     background-color: var(--color-main-orange);
     left: 0;
   }
+  .popup__content {
+    align-items: flex-start;
+    height: 90vh;
+  }
 }
 @media screen and (max-width: 992px) {
   :root {
@@ -1067,6 +1070,12 @@ a.popup__barbershop-button {
     justify-content: flex-start;
     gap: 20px;
   }
+  .popup {
+    justify-content: flex-start;
+  }
+  .popup .popup__gallery {
+    justify-content: center;
+  }
   .popup__barbershop {
     padding: 70px 30px;
     overflow-y: scroll;
@@ -1091,6 +1100,8 @@ a.popup__barbershop-button {
   }
   .popup__barbershop-cities {
     padding-bottom: 20px;
+    padding-top: 20px;
+
     overflow-y: auto;
     max-height: unset;
   }
@@ -1100,6 +1111,10 @@ a.popup__barbershop-button {
   }
   .form-input {
     height: 50px;
+    border-radius: 10px;
+  }
+  .popup__barbershop {
+    top: 20px;
   }
 }
 
@@ -1120,5 +1135,8 @@ a.popup__barbershop-button {
   }
   .form-input {
     height: 45px;
+  }
+  .form-close__button {
+    right: 5px;
   }
 }
