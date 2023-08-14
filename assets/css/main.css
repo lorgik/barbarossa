@@ -1268,6 +1268,15 @@ a.tabs-button {
   box-shadow: 0px 10px 40px 0px rgba(227, 93, 18, 0.2);
 }
 
+a.popup__barbershop-button {
+  display: none;
+  color: var(--color-main-white);
+  padding: 17px 20px;
+  border-radius: 10px;
+  font-size: 1.0625rem;
+  box-shadow: 0px 10px 40px 0px rgba(227, 93, 18, 0.2);
+}
+
 .popup__barbershop-form {
   margin-top: 15px;
   position: relative;
@@ -1638,6 +1647,7 @@ a.tabs-button {
     flex-direction: column;
     gap: 25px;
     padding: 20px;
+    padding-bottom: 40px;
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
@@ -2150,16 +2160,33 @@ a.tabs-button {
   }
   .popup__barbershop {
     padding: 70px 30px;
+    overflow-y: scroll;
   }
   .popup__close-icon {
     right: 20px;
     top: 20px;
   }
   .popup__barbershop-tabs {
+    margin-top: 15px;
     gap: 30px;
+  }
+  .popup__barbershop-tabs a {
+    font-size: 1.25rem;
   }
   a.tabs-button {
     padding: 12px 14px;
+    display: none;
+  }
+  a.popup__barbershop-button {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .popup__barbershop-cities {
+    padding-bottom: 20px;
+    overflow-y: auto;
+    max-height: unset;
   }
   .popup__gallery {
     height: 50dvh;
@@ -2182,6 +2209,9 @@ a.tabs-button {
   }
   .cosmetics-slider .slick-slide {
     box-shadow: none;
+  }
+  .form-input {
+    height: 50px;
   }
 }
 
@@ -2226,5 +2256,11 @@ a.tabs-button {
   }
   .cosmetics__card-button::before {
     top: 13px;
+  }
+  .popup__barbershop {
+    padding: 50px 30px;
+  }
+  .form-input {
+    height: 45px;
   }
 }
