@@ -1615,12 +1615,9 @@ a.popup__barbershop-button {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
-  .header-button:hover {
-    transform: scale(1.1);
-  }
   .header-button.active {
     background-image: url("../images/close-icon.svg");
     background-size: 25%;
@@ -1919,14 +1916,26 @@ a.popup__barbershop-button {
 @media screen and (max-width: 576px) {
   .menu__list.active {
     top: 0;
-    animation: slide 0.4s ease-in-out normal;
+    animation: slideDown 0.4s ease-in-out normal;
   }
-  @keyframes slide {
+  .menu__list.animation {
+    top: -1000%;
+    animation: slideTop 0.4s ease-in-out normal;
+  }
+  @keyframes slideDown {
     from {
       top: -1000%;
     }
     to {
       top: 0;
+    }
+  }
+  @keyframes slideTop {
+    from {
+      top: 0;
+    }
+    to {
+      top: -1000%;
     }
   }
   .main-bg {
