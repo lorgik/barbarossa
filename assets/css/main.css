@@ -1917,18 +1917,6 @@ a.popup__barbershop-button {
 }
 
 @media screen and (max-width: 576px) {
-  .header-menu {
-    top: 0;
-    animation: slide 0.5s ease-in-out normal;
-  }
-  @keyframes slide {
-    from {
-      top: -200px;
-    }
-    to {
-      top: 0;
-    }
-  }
   .main-bg {
     height: 750px;
     object-position: -300px;
