@@ -1076,6 +1076,9 @@ a.popup__barbershop-button {
   .breadcrumb * {
     font-size: 1.2rem;
   }
+  .breadcrumb li {
+    margin-bottom: 5px;
+  }
   .main-card {
     padding: 0 30px;
   }

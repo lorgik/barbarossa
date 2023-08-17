@@ -2185,7 +2185,7 @@ a.popup__barbershop-button {
   .popup {
     justify-content: flex-start;
   }
-  .popup .popup__gallery {
+  #popup__gallery.popup {
     justify-content: center;
   }
   .popup__barbershop {
