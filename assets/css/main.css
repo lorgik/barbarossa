@@ -206,9 +206,9 @@ img {
 .menu__list-link--choose {
   position: relative;
   display: inline-block;
-  line-height: 120%;
+  line-height: 1;
   background-color: var(--color-main-orange);
-  padding: 8px 28px 8px 14px;
+  padding: 9px 28px 9px 14px;
   border-radius: 5px;
 
   transition: background-color 0.2s ease-in-out;
