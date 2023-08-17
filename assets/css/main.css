@@ -1500,7 +1500,8 @@ a.popup__barbershop-button {
   align-items: flex-start;
 }
 
-.news-slider .slick-slide {
+.news-slider .slick-slide,
+.youtube-slider .slick-slide {
   margin: 0 12px;
 }
 
@@ -1517,6 +1518,11 @@ a.popup__barbershop-button {
 .articles-slider .slick-list {
   margin-left: -12px;
   margin-right: -12px;
+}
+
+.youtube-slider .slick-list {
+  margin-left: -24px;
+  margin-right: -24px;
 }
 
 /* Слайд активный (показывается) */
@@ -2063,7 +2069,6 @@ a.popup__barbershop-button {
   }
 
   .youtube-button {
-    /* margin-top: 60px; */
     font-size: 0;
     padding: unset;
     width: 46px;
@@ -2078,8 +2083,7 @@ a.popup__barbershop-button {
   }
   .youtube-videos {
     margin-top: 72px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    display: block;
   }
 
   .youtube-image {

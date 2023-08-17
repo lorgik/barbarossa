@@ -313,6 +313,8 @@ $(document).ready(function () {
   if (windowInnerWidth <= 576) {
     const articlesSlider = document.querySelector(".articles-box");
     articlesSlider.classList.add("articles-slider");
+    const youtubeSlider = document.querySelector(".youtube-videos");
+    youtubeSlider.classList.add("youtube-slider");
   }
 
   $(".articles-slider").slick({
@@ -328,6 +330,22 @@ $(document).ready(function () {
     draggable: false,
     swipe: true,
     centerMode: true,
+  });
+
+  $(".youtube-slider").slick({
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+    centerMode: true,
+    arrows: false,
   });
 });
 
