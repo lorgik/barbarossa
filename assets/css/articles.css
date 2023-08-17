@@ -925,10 +925,30 @@ a.popup__barbershop-button {
     flex-direction: column;
     gap: 25px;
     padding: 20px;
-    padding-bottom: 40px;
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
+    animation: slideDown 0.4s ease-in-out normal;
+  }
+  .menu__list.animation {
+    top: -1000%;
+    animation: slideTop 0.4s ease-in-out normal;
+  }
+  @keyframes slideDown {
+    from {
+      top: -1000%;
+    }
+    to {
+      top: 0;
+    }
+  }
+  @keyframes slideTop {
+    from {
+      top: 0;
+    }
+    to {
+      top: -1000%;
+    }
   }
   .submenu__list {
     padding: unset;

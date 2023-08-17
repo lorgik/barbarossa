@@ -1649,6 +1649,28 @@ a.popup__barbershop-button {
     align-items: flex-start;
     justify-content: flex-start;
     overflow-y: auto;
+    animation: slideDown 0.4s ease-in-out normal;
+  }
+
+  .menu__list.animation {
+    top: -1000%;
+    animation: slideTop 0.4s ease-in-out normal;
+  }
+  @keyframes slideDown {
+    from {
+      top: -1000%;
+    }
+    to {
+      top: 0;
+    }
+  }
+  @keyframes slideTop {
+    from {
+      top: 0;
+    }
+    to {
+      top: -1000%;
+    }
   }
   .submenu__list {
     padding: unset;
@@ -1914,30 +1936,6 @@ a.popup__barbershop-button {
 }
 
 @media screen and (max-width: 576px) {
-  .menu__list.active {
-    top: 0;
-    animation: slideDown 0.4s ease-in-out normal;
-  }
-  .menu__list.animation {
-    top: -1000%;
-    animation: slideTop 0.4s ease-in-out normal;
-  }
-  @keyframes slideDown {
-    from {
-      top: -1000%;
-    }
-    to {
-      top: 0;
-    }
-  }
-  @keyframes slideTop {
-    from {
-      top: 0;
-    }
-    to {
-      top: -1000%;
-    }
-  }
   .main-bg {
     height: 750px;
     object-position: -300px;

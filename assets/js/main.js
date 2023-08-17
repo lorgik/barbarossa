@@ -368,7 +368,7 @@ if (windowInnerWidth <= 1200) {
   let menuBtn = document.querySelector(".header-button");
 
   let timer;
-  menuBtn.addEventListener("click", function (e) {
+  menuBtn.addEventListener("click", function () {
     if (!timer) {
       if (menu.classList.contains("active")) {
         menu.classList.add("animation");

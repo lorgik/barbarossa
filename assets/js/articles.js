@@ -184,16 +184,22 @@ if (windowInnerWidth <= 1200) {
   const menu = document.querySelector(".menu__list");
 
   let menuBtn = document.querySelector(".header-button");
+
+  let timer;
   menuBtn.addEventListener("click", function () {
-    menu.classList.toggle("active");
-    menuBtn.classList.toggle("active");
-    page.classList.toggle("overflow-hidden");
+    if (!timer) {
+      if (menu.classList.contains("active")) {
+        menu.classList.add("animation");
+        setTimeout(() => {
+          menu.classList.remove("active");
+        }, 400);
+      } else {
+        menu.classList.remove("animation");
+        menu.classList.add("active");
+      }
+      menuBtn.classList.toggle("active");
+      page.classList.toggle("overflow-hidden");
+      timer = setTimeout(() => (timer = clearTimeout(timer)), 400);
+    }
   });
-  // menu.addEventListener("click", function (e) {
-  //   if (!e.target.closest(".menu__list-item")) {
-  //     menu.classList.toggle("active");
-  //     menuBtn.classList.toggle("active");
-  //     page.classList.toggle("overflow-hidden");
-  //   }
-  // });
 }
