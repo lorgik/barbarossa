@@ -2321,6 +2321,9 @@ a.popup__barbershop-button {
   .main .menu__list-number {
     font-size: 1.5rem;
   }
+  .menu__list.active .menu__list-number {
+    font-size: 1.25rem;
+  }
   .info {
     position: relative;
     top: 50px;
