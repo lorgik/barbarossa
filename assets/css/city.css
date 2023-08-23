@@ -1707,10 +1707,22 @@ a.popup__barbershop-button {
   border-radius: 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0px 10px 40px 0px rgba(227, 93, 18, 0.2);
+  animation: pulse 3s ease-in-out infinite;
 }
 
-.booking-icon:hover,
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.075);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .show-map-icon:hover {
   transform: scale(1.05);
 }
@@ -1883,6 +1895,12 @@ a.popup__barbershop-button {
 
 .promotions-slider .slick-arrow.slick-next:hover {
   background-image: url("../images/arrow-right.svg");
+}
+
+@media screen and (min-width: 3280px) {
+  .gallery-slider__container {
+    left: 55.4%;
+  }
 }
 
 @media screen and (max-width: 1400px) {
