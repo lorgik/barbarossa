@@ -697,7 +697,7 @@ img {
 }
 
 .promotions-title {
-  margin-top: 100px;
+  padding-top: 100px;
 }
 
 .promotions-slider {
@@ -1914,6 +1914,9 @@ a.popup__barbershop-button {
   .gallery-shadow {
     display: none;
   }
+  .services {
+    background-image: none;
+  }
 }
 
 @media screen and (max-width: 1400px) {
@@ -2727,7 +2730,9 @@ a.popup__barbershop-button {
   .info-card__title {
     font-size: 1.75rem;
   }
-
+  .info-card__text {
+    max-width: 180px;
+  }
   .youtube-title {
     max-width: 250px;
   }
