@@ -528,8 +528,15 @@ img {
   transition: width 0.3s ease-in-out;
 }
 
-.gallery-slider__container {
+.gallery-container {
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.gallery-slider__container {
+  position: relative;
 
   top: 231px;
   left: 56%;
@@ -571,8 +578,8 @@ img {
 .gallery-shadow {
   z-index: 1;
   position: absolute;
-  top: 105px;
-  right: 0;
+  top: 0;
+  left: 568px;
   width: 288px;
   height: 622px;
 
@@ -1897,9 +1904,15 @@ a.popup__barbershop-button {
   background-image: url("../images/arrow-right.svg");
 }
 
-@media screen and (min-width: 3280px) {
+@media screen and (min-width: 2280px) {
   .gallery-slider__container {
-    left: 55.4%;
+    left: 880px;
+  }
+  .gallery-slider {
+    max-width: 416px;
+  }
+  .gallery-shadow {
+    display: none;
   }
 }
 
@@ -1910,6 +1923,9 @@ a.popup__barbershop-button {
   .info-card__image {
     width: 180px;
     height: 180px;
+  }
+  .gallery-text {
+    max-width: 600px;
   }
   .cosmetics-slider {
     max-width: 1140px;
@@ -1925,9 +1941,7 @@ a.popup__barbershop-button {
     width: inherit;
     background-position: right bottom;
   }
-  .gallery-slider__container {
-    left: 62%;
-  }
+
   .arcticles-card,
   .arcticles-card.big-card {
     max-width: 350px;
@@ -2145,11 +2159,17 @@ a.popup__barbershop-button {
     width: 70px;
     height: 70px;
   }
+  .gallery-container {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+  }
   .gallery-slider__container {
     position: relative;
     margin-top: 20px;
     top: 0;
-    left: 150px;
+    left: 0;
     height: 300px;
   }
   .gallery-shadow {
@@ -2258,10 +2278,6 @@ a.popup__barbershop-button {
   .gallery {
     margin-top: 50px;
     border-radius: 60px 60px 0 0;
-  }
-
-  .gallery-slider__container {
-    left: 100px;
   }
   .gallery-title {
     margin-top: 150px;
@@ -2413,9 +2429,6 @@ a.popup__barbershop-button {
   }
   .gallery-arrows {
     margin-top: 30px;
-  }
-  .gallery-slider__container {
-    left: 24px;
   }
   .progress-bar {
     width: 200px;
