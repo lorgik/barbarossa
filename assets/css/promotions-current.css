@@ -284,6 +284,30 @@ img {
   color: var(--color-main-orange);
 }
 
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #aaaaaa;
+  font-size: 0.875rem;
+}
+
+.breadcrumb a {
+  color: #aaaaaa;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 11px 0 17px;
+  content: ">";
+}
+
+.breadcrumb li:last-child {
+  font-weight: 700;
+}
+
 .main {
   margin-top: 213px;
 }
@@ -918,6 +942,9 @@ a.popup__barbershop-button {
   }
   .main {
     margin-top: 180px;
+  }
+  .breadcrumb * {
+    font-size: 1.2rem;
   }
   .promotion-card {
     gap: 20px;
