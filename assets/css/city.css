@@ -253,6 +253,10 @@ img {
   gap: 7px;
 }
 
+.menu-phone {
+  display: none;
+}
+
 .menu__list-number {
   white-space: nowrap;
   font-size: 1.125rem;
@@ -451,8 +455,7 @@ img {
   height: inherit;
 }
 
-.gallery {
-  position: relative;
+.white-bg {
   margin-top: 272px;
   color: var(--color-secondary-black);
   background-color: var(--color-main-white);
@@ -461,8 +464,16 @@ img {
   overflow: hidden;
 }
 
+.gallery {
+  position: relative;
+  margin-top: 100px;
+  color: var(--color-secondary-black);
+  background-color: var(--color-main-white);
+  overflow: hidden;
+}
+
 .gallery-title {
-  margin-top: 239px;
+  /* margin-top: 239px; */
   max-width: 660px;
 }
 
@@ -538,7 +549,7 @@ img {
 .gallery-slider__container {
   position: relative;
 
-  top: 231px;
+  top: 0;
   left: 56%;
 
   width: 100%;
@@ -590,7 +601,7 @@ img {
 }
 
 .cosmetics {
-  margin-top: 178px;
+  margin-top: 130px;
 
   color: var(--color-secondary-black);
 
@@ -697,7 +708,7 @@ img {
 }
 
 .promotions-title {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .promotions-slider {
@@ -1741,7 +1752,7 @@ a.popup__barbershop-button {
 }
 
 .services {
-  margin-top: 55px;
+  margin-top: 150px;
   background-image: url("../images/city/services-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -1749,6 +1760,7 @@ a.popup__barbershop-button {
   padding-top: 103px;
 
   color: var(--color-secondary-black);
+  height: 958px;
 }
 
 .services-top {
@@ -2074,7 +2086,7 @@ a.popup__barbershop-button {
     height: unset;
   }
   .services-box__image {
-    width: inherit;
+    width: 100%;
     background-position: right bottom;
   }
 
@@ -2287,6 +2299,15 @@ a.popup__barbershop-button {
   .info-card__text {
     max-width: 120px;
   }
+  .services {
+    padding-top: 20px;
+    height: unset;
+    padding-bottom: 40px;
+    margin-top: 100px;
+  }
+  .services-top {
+    margin-top: 40px;
+  }
   .booking-icon {
     width: 125px;
     height: 125px;
@@ -2294,6 +2315,9 @@ a.popup__barbershop-button {
   .show-map-icon {
     width: 70px;
     height: 70px;
+  }
+  .gallery {
+    margin-top: 0;
   }
   .gallery-container {
     position: relative;
@@ -2422,15 +2446,21 @@ a.popup__barbershop-button {
     right: 0;
     border-radius: 5px;
   }
+  .white-bg {
+    margin-top: 25px;
+  }
   .gallery {
     margin-top: 50px;
     border-radius: 60px 60px 0 0;
   }
   .gallery-title {
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .gallery-text {
     margin-top: 20px;
+  }
+  .services {
+    margin-top: 150px;
   }
   .services-bottom {
     display: flex;
@@ -2449,7 +2479,7 @@ a.popup__barbershop-button {
     flex-direction: column;
   }
   .services-box {
-    display: block;
+    display: none;
     width: 100%;
     margin-top: 50px;
   }
@@ -2478,6 +2508,25 @@ a.popup__barbershop-button {
 }
 
 @media screen and (max-width: 576px) {
+  .header .header-button {
+    order: -1;
+  }
+  .header .header-logo__link {
+    transition-property: width, height;
+  }
+  .header .menu__list:not(.active) {
+    width: 56px;
+    position: absolute;
+  }
+  .header .header-button {
+    transition: none;
+  }
+  .header .menu__list-item--logo {
+    align-self: center;
+  }
+  .header-logo__link.active {
+    visibility: hidden;
+  }
   .main-bg {
     height: 750px;
     object-position: -300px;
@@ -2495,9 +2544,22 @@ a.popup__barbershop-button {
     right: -5px;
     left: unset;
   }
-  .main .menu__list-link--phone {
+  .menu__list-link--phone {
+    display: flex;
     right: 24px;
     top: -70px;
+  }
+  .menu-phone {
+    /* padding-right: 10px; */
+    width: 56px;
+    justify-content: center;
+  }
+  .menu-phone .menu__list-number {
+    display: none;
+  }
+  .menu-phone img {
+    width: 28px;
+    height: 28px;
   }
   .main .menu__list-number {
     font-size: 1.5rem;
@@ -2563,11 +2625,14 @@ a.popup__barbershop-button {
     left: 20px;
     bottom: 20px;
   }
+  .white-bg {
+    margin-top: -300px;
+  }
   .gallery {
-    margin-top: -275px;
+    margin-top: 0;
   }
   .gallery-title {
-    margin-top: 420px;
+    margin-top: 100px;
   }
   .gallery-subtitle {
     margin-top: 10px;
@@ -2618,8 +2683,11 @@ a.popup__barbershop-button {
     top: 20px;
     right: 15px;
   }
+  .promotions-title {
+    padding-top: 100px;
+  }
   .services {
-    margin-top: 0;
+    margin-top: 400px;
   }
   .services__table {
     width: 100%;

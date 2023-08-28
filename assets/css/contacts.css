@@ -1055,6 +1055,24 @@ a.popup__barbershop-button {
 }
 
 @media screen and (max-width: 576px) {
+  .header .header-button {
+    order: -1;
+  }
+  .header .header-logo__link {
+    transition-property: width, height;
+  }
+  .header .menu__list:not(.active) {
+    width: 56px;
+  }
+  .header .header-button {
+    transition: none;
+  }
+  .header .menu__list-item--logo {
+    align-self: center;
+  }
+  .header-logo__link.active {
+    visibility: hidden;
+  }
   .main {
     border-radius: 60px 60px 0 0;
     margin-bottom: 320px;

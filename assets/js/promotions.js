@@ -181,7 +181,9 @@ const page = document.querySelector("body");
 
 const menu = document.querySelector(".menu__list");
 
-let menuBtn = document.querySelector(".header-button");
+const menuBtn = document.querySelector(".header-button");
+
+const logo = document.querySelector(".header-logo__link");
 
 let timer;
 menuBtn.addEventListener("click", function () {
@@ -190,10 +192,12 @@ menuBtn.addEventListener("click", function () {
       menu.classList.add("animation");
       setTimeout(() => {
         menu.classList.remove("active");
+        logo.classList.remove("active");
       }, 400);
     } else {
       menu.classList.remove("animation");
       menu.classList.add("active");
+      logo.classList.add("active");
     }
     menuBtn.classList.toggle("active");
     page.classList.toggle("overflow-hidden");
