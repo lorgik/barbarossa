@@ -12,17 +12,9 @@
   font-weight: 600;
 }
 
-/* @font-face {
-  font-family: "Font";
-  src: url("../fonts/BergenSans.woff") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-} */
-
 @font-face {
   font-family: "Font";
-  src: url("../fonts/BergenSans.eot"), url("../fonts/BergenSans.eot?#iefix") format("embedded-opentype"), url("../fonts/BergenSans.woff") format("woff"),
-    url("../fonts/BergenSans.ttf") format("truetype"), url("../fonts/BergenSans.svg") format("svg");
+  src: url("../fonts/BergenSans.woff") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
