@@ -208,6 +208,7 @@ img {
   background-color: var(--color-main-orange);
   padding: 8px 28px 8px 14px;
   border-radius: 5px;
+  height: 34px;
 
   transition: background-color 0.2s ease-in-out;
 }
