@@ -99,7 +99,7 @@ img {
   z-index: -1;
   object-fit: cover;
   width: 100%;
-  height: 696px;
+  height: 710px;
   background-color: var(--color-main-black);
 }
 
@@ -787,8 +787,7 @@ a.popup__barbershop-button {
 
 .main {
   margin-top: 357px;
-  background-color: transparent;
-  border-radius: 100px 100px 0 0;
+  height: 350px;
 }
 
 .main-container {
@@ -808,6 +807,14 @@ a.popup__barbershop-button {
   padding: 34px 36px;
   border-radius: 15px;
   font-size: 1.25rem;
+}
+
+.page-image {
+  position: absolute;
+  top: -150px;
+  right: -104px;
+  width: 800px;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 1200px) {
@@ -921,6 +928,12 @@ a.popup__barbershop-button {
     align-items: flex-start;
     height: 90vh;
   }
+  .main {
+    height: 278px;
+  }
+  .page-image {
+    width: 600px;
+  }
 }
 @media screen and (max-width: 992px) {
   :root {
@@ -932,6 +945,12 @@ a.popup__barbershop-button {
     height: 125px;
   }
   .popup__barbershop-map {
+    display: none;
+  }
+  .main {
+    height: unset;
+  }
+  .page-image {
     display: none;
   }
 }
