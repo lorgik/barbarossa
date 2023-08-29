@@ -208,11 +208,12 @@ img {
 
 .menu__list-link--choose {
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   background-color: var(--color-main-orange);
-  padding: 8px 28px 8px 14px;
+  padding: 0px 28px 0px 14px;
   border-radius: 5px;
-  height: max-content;
+  height: 34px;
 
   transition: background-color 0.2s ease-in-out;
 }
