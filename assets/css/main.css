@@ -27,8 +27,7 @@ body {
   font-family: "Font";
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  /* line-height: 1.25; */
-  line-height: 1;
+  line-height: 1.25;
   color: var(--color-main-white);
 }
 
@@ -209,10 +208,11 @@ img {
 
 .menu__list-link--choose {
   position: relative;
-  display: block;
+  display: inline-block;
   background-color: var(--color-main-orange);
   padding: 8px 28px 8px 14px;
   border-radius: 5px;
+  height: 34px;
 
   transition: background-color 0.2s ease-in-out;
 }
