@@ -211,15 +211,9 @@ img {
   display: flex;
   align-items: center;
   background-color: var(--color-main-orange);
-  padding: 0px 28px 0px 14px;
   border-radius: 5px;
-  height: 34px;
 
   transition: background-color 0.2s ease-in-out;
-}
-
-.menu__list-link--choose span {
-  line-height: 1;
 }
 
 .menu__list-link--choose:hover {
