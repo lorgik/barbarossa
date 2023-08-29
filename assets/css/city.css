@@ -1631,6 +1631,34 @@ a.popup__barbershop-button {
   background-color: var(--color-main-orange);
 }
 
+.barbershops {
+  padding-top: 100px;
+}
+
+.barbershops a {
+  color: var(--color-secondary-black);
+}
+
+.barbershops a:hover {
+  color: var(--color-secondary-black);
+}
+
+.barbershops-box {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.barbershops-title {
+  color: var(--color-secondary-black);
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+}
+
 .city-title {
   font-size: 1.625rem;
   font-weight: 700;
@@ -2492,6 +2520,9 @@ a.popup__barbershop-button {
   .white-bg {
     margin-top: 25px;
   }
+  .barbershops-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .gallery {
     margin-top: 50px;
     border-radius: 60px 60px 0 0;
@@ -2671,6 +2702,15 @@ a.popup__barbershop-button {
   }
   .white-bg {
     margin-top: -300px;
+  }
+  .barbershops {
+    padding-top: 70px;
+  }
+  .barbershops-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .barbershops .city-box {
+    font-size: 1.25rem;
   }
   .gallery {
     margin-top: 0;
