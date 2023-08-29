@@ -809,6 +809,10 @@ a.popup__barbershop-button {
   margin-bottom: 1rem;
 }
 
+.textarea h2:not(:first-of-type) {
+  margin-top: 40px;
+}
+
 .textarea p {
   margin-bottom: 2rem;
 }
