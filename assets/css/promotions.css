@@ -805,7 +805,6 @@ a.popup__barbershop-button {
 }
 
 .autoflash {
-  /* position: relative; */
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -832,6 +831,18 @@ a.popup__barbershop-button {
   -ms-animation: moving 4s ease-in-out infinite;
   -o-animation: moving 4s ease-in-out infinite;
   animation: moving 4s ease-in-out infinite;
+}
+
+@keyframes moving {
+  30% {
+    webkit-transform: skewX(-45deg) translateX(40em);
+    transform: skewX(-45deg) translateX(40em);
+  }
+
+  100% {
+    webkit-transform: skewX(-45deg) translateX(40em);
+    transform: skewX(-45deg) translateX(40em);
+  }
 }
 
 /* Ограничивающая оболочка */
