@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: "Font";
-  src: local("Font"), url("../fonts/BergenSans.eot"), url("../fonts/BergenSans.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/BergenSans.woff") format("woff"), url("../fonts/BergenSans.ttf") format("truetype"), url("../fonts/BergenSans.svg") format("svg");
+  src: url("../fonts/BergenSans.eot"), url("../fonts/BergenSans.eot?#iefix") format("embedded-opentype"), url("../fonts/BergenSans.woff") format("woff"),
+    url("../fonts/BergenSans.ttf") format("truetype"), url("../fonts/BergenSans.svg") format("svg");
   font-style: normal;
   font-weight: 400;
 }
