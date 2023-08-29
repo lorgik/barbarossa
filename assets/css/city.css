@@ -448,11 +448,13 @@ img {
   aspect-ratio: 1;
   border-radius: 15px;
   overflow: hidden;
+  filter: grayscale(0.9);
 }
 
 .info-card__image img {
   width: inherit;
   height: inherit;
+  filter: grayscale(0.9);
 }
 
 .white-bg {
