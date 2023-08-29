@@ -218,6 +218,10 @@ img {
   transition: background-color 0.2s ease-in-out;
 }
 
+.menu__list-link--choose span {
+  line-height: 1;
+}
+
 .menu__list-link--choose:hover {
   background-color: var(--color-secondary-orange);
 }
