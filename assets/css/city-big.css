@@ -379,7 +379,7 @@ img {
   transform: scale(1.15);
 }
 
-.info {
+.statistics {
   z-index: 2;
   position: absolute;
   display: flex;
@@ -395,7 +395,18 @@ img {
   background: url("../images/statistics-bg.jpg") var(--color-main-black);
 }
 
-.info-card {
+.statistics::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 229px;
+  border-radius: 40px;
+  background-image: url("../images/statistics-shadow.png");
+}
+
+.statistics-card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -407,7 +418,7 @@ img {
   height: 230px;
 }
 
-.info-card::before {
+.statistics-card::before {
   z-index: 2;
   position: absolute;
   content: "";
@@ -419,43 +430,28 @@ img {
   background: #777;
 }
 
-.info-card:last-of-type::before {
+.statistics-card:last-of-type::before {
   display: none;
 }
 
-.info-card__title {
+.statistics-card__title {
   position: relative;
   z-index: 1;
   font-size: 2.5625rem;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
-.info-card__text {
-  margin-top: 10px;
+.statistics-card__text {
   position: relative;
   z-index: 1;
   font-size: 1.25rem;
-  max-width: 280px;
+  max-width: 177px;
 }
 
-.info-card__image {
+.statistics-card__image {
   position: absolute;
-  z-index: 1;
   right: 0;
-  top: 1px;
-  width: 231px;
-  height: 100%;
-  aspect-ratio: 1;
-  border-radius: 15px;
-  overflow: hidden;
-  filter: grayscale(0.9);
-}
-
-.info-card__image img {
-  width: inherit;
-  height: inherit;
-  filter: grayscale(0.9);
+  bottom: 1px;
 }
 
 .white-bg {
@@ -1633,7 +1629,7 @@ a.popup__barbershop-button {
 }
 
 .barbershops {
-  padding-top: 100px;
+  padding-top: 200px;
 }
 
 .barbershops a {
@@ -1783,7 +1779,6 @@ a.popup__barbershop-button {
 }
 
 .services {
-  margin-top: 150px;
   background-image: url("../images/city/services-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2151,10 +2146,6 @@ a.popup__barbershop-button {
   .header-menu .menu__list {
     gap: 35px;
   }
-  .info-card__image {
-    width: 180px;
-    height: 180px;
-  }
   .gallery-text {
     max-width: 600px;
   }
@@ -2266,20 +2257,23 @@ a.popup__barbershop-button {
     right: 10.5px;
     top: -60px;
   }
-  .info {
+  .statistics {
     height: 170px;
   }
-  .info::before {
+  .statistics::before {
     height: inherit;
   }
-  .info-card {
+  .statistics-card {
     height: inherit;
   }
-
-  .info-card__title {
+  .statistics-card__image {
+    width: 155px;
+    height: 153px;
+  }
+  .statistics-card__title {
     font-size: 2rem;
   }
-  .info-card__text {
+  .statistics-card__text {
     font-size: 1rem;
     max-width: 130px;
   }
@@ -2357,29 +2351,34 @@ a.popup__barbershop-button {
     align-items: flex-start;
     height: 90vh;
   }
+  .barbershops {
+    padding-top: 150px;
+  }
+  .white-bg {
+    height: unset;
+    min-height: unset;
+  }
 }
 
 @media screen and (max-width: 992px) {
   :root {
     font-size: 12px;
   }
-  .info {
+  .statistics {
     height: 120px;
     border-radius: 25px;
   }
-  .info-card {
+  .statistics-card {
     padding-left: 25px;
   }
-  .info-card::before {
+  .statistics-card::before {
     height: inherit;
   }
-  .info-card__image {
-    width: 92px;
-    height: unset;
-    aspect-ratio: 1;
-    top: 20px;
+  .statistics-card__image {
+    width: 100px;
+    height: 99px;
   }
-  .info-card__text {
+  .statistics-card__text {
     max-width: 120px;
   }
   .services {
@@ -2510,24 +2509,22 @@ a.popup__barbershop-button {
     width: inherit;
     height: inherit;
   }
-  .info {
+  .statistics {
     top: 380px;
   }
-  .info-card {
+  .statistics-card {
     padding-left: 20px;
   }
-  .info-card__title {
-    font-size: 1.5rem;
-    max-width: 120px;
+  .statistics-card__title {
+    font-size: 1.875rem;
   }
-  .info-card__text {
+  .statistics-card__text {
     font-size: 0.875rem;
     max-width: 100px;
   }
-  .info-card__image {
-    width: 85px;
-    right: 0;
-    border-radius: 5px;
+  .statistics-card__image {
+    width: 80px;
+    height: 78px;
   }
   .white-bg {
     margin-top: 25px;
@@ -2546,7 +2543,7 @@ a.popup__barbershop-button {
     margin-top: 20px;
   }
   .services {
-    margin-top: 150px;
+    margin-top: 70px;
   }
   .services-bottom {
     display: flex;
@@ -2654,54 +2651,41 @@ a.popup__barbershop-button {
   .menu__list.active .menu__list-number {
     font-size: 1.5rem;
   }
-  .info {
+  .statistics {
     position: relative;
     top: 50px;
     flex-wrap: wrap;
     height: 400px;
     border-radius: 40px;
   }
-  .info::before {
+  .statistics::before {
     display: none;
   }
-  .info-card {
+  .statistics-card {
     padding-left: 28px;
     height: 100px;
     max-width: none;
   }
-  .info-card::before {
+  .statistics-card::before {
     width: auto;
     height: 1px;
     bottom: 0;
     left: 28px;
     right: 28px;
   }
-  .info-card__title {
-    font-size: 2rem;
-    max-width: unset;
-    max-width: 225px;
+  .statistics-card__title {
+    font-size: 2.5rem;
   }
-
-  .info-card__text {
+  .statistics-card__text {
     margin-top: 10px;
     font-size: 1.25rem;
     max-width: 220px;
   }
-  .info-card:nth-of-type(1) .info-card__image {
-    right: 20px;
+  .statistics-card__image {
+    width: 117px;
+    height: 115px;
   }
-  .info-card:nth-of-type(3) .info-card__image {
-    right: 0;
-  }
-  .info-card__image {
-    width: 100px;
-    height: unset;
-    aspect-ratio: 1;
-    top: 0px;
-    right: 10px;
-    border-radius: 20px;
-  }
-  .info-card:nth-of-type(3) .info-card__image {
+  .statistics-card:nth-of-type(3) .statistics-card__image {
     bottom: -16px;
   }
   .booking-icon {
@@ -2716,7 +2700,7 @@ a.popup__barbershop-button {
     margin-top: -300px;
   }
   .barbershops {
-    padding-top: 70px;
+    padding-top: 425px;
   }
   .barbershops-box {
     grid-template-columns: repeat(1, 1fr);
@@ -2783,7 +2767,7 @@ a.popup__barbershop-button {
     padding-top: 100px;
   }
   .services {
-    margin-top: 400px;
+    margin-top: 100px;
   }
   .services__table {
     width: 100%;
