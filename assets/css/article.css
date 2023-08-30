@@ -330,12 +330,15 @@ img {
 .footer-menu {
   max-width: 373px;
   width: 100%;
+  margin-right: auto;
+  margin-left: 135px;
 }
 
 .footer-menu__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 0;
 }
 
 .footer-menu__link {
@@ -356,6 +359,7 @@ img {
   align-items: center;
   justify-content: space-between;
   font-size: 1.125rem;
+  gap: 20px;
 }
 
 .footer-links__phone {
@@ -403,10 +407,6 @@ img {
   background-image: url("../images/mail-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-.footer-links__box--socials {
-  margin-top: 45px;
 }
 
 .links-button {
