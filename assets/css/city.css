@@ -3031,6 +3031,25 @@ a.popup__barbershop-button {
   .popup__barbershop {
     top: 20px;
   }
+  .header:not(.fit) .header-menu.test .header-logo__link {
+    width: 80px;
+    height: unset;
+  }
+
+  .header-menu.test .menu-phone {
+    width: unset;
+  }
+
+  .header-menu.test .menu-phone .menu__list-number {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+
+  .header-menu.test .menu-phone img {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 390px) {
@@ -3091,20 +3110,4 @@ a.popup__barbershop-button {
   .form-close__button {
     right: 5px;
   }
-}
-
-.header-menu.test .container {
-}
-
-.header-menu.test .menu-phone {
-  width: unset;
-}
-
-.header-menu.test .menu-phone .menu__list-number {
-  display: block;
-  font-size: 1.25rem;
-}
-
-.header-menu.test .menu-phone img {
-  display: none;
 }
