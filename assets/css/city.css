@@ -3092,3 +3092,19 @@ a.popup__barbershop-button {
     right: 5px;
   }
 }
+
+.header-menu.test .container {
+}
+
+.header-menu.test .menu-phone {
+  width: unset;
+}
+
+.header-menu.test .menu-phone .menu__list-number {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.header-menu.test .menu-phone img {
+  display: none;
+}
