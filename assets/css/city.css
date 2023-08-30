@@ -2078,7 +2078,8 @@ a.popup__barbershop-button {
 }
 
 /* Слайд */
-.promotions-slider .slick-slide {
+.promotions-slider .slick-slide,
+.vkontakte-slider .slick-slide {
   margin: 0 12px;
 }
 
@@ -2087,8 +2088,14 @@ a.popup__barbershop-button {
   margin-right: -12px;
 }
 
+.vkontakte-slider .slick-list {
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
 /* Стрелка */
-.promotions-slider .slick-arrow {
+.promotions-slider .slick-arrow,
+.vkontakte-slider .slick-arrow {
   position: absolute;
   top: 50%;
   margin-top: -25px;
@@ -2103,21 +2110,25 @@ a.popup__barbershop-button {
   transition: background-image 0.2s ease-in-out;
 }
 /* Стрелка влево */
-.promotions-slider .slick-arrow.slick-prev {
+.promotions-slider .slick-arrow.slick-prev,
+.vkontakte-slider .slick-arrow.slick-prev {
   left: -55px;
   background-image: url("../images/arrow-left-disabled.svg");
 }
 /* Стрелка вправо */
-.promotions-slider .slick-arrow.slick-next {
+.promotions-slider .slick-arrow.slick-next,
+.vkontakte-slider .slick-arrow.slick-next {
   right: -55px;
   background-image: url("../images/arrow-right-disabled.svg");
 }
 
-.promotions-slider .slick-arrow.slick-prev:hover {
+.promotions-slider .slick-arrow.slick-prev:hover,
+.vkontakte-slider .slick-arrow.slick-prev:hover {
   background-image: url("../images/arrow-left.svg");
 }
 
-.promotions-slider .slick-arrow.slick-next:hover {
+.promotions-slider .slick-arrow.slick-next:hover,
+.vkontakte-slider .slick-arrow.slick-next:hover {
   background-image: url("../images/arrow-right.svg");
 }
 
@@ -2805,9 +2816,13 @@ a.popup__barbershop-button {
   .vkontakte {
     padding-top: 70px;
   }
+  .vkontakte-posts {
+    display: block;
+  }
   .vkontakte-button {
     padding: unset;
     font-size: 0;
+    min-width: 46px;
     width: 46px;
     height: 46px;
     border-radius: 10px;
@@ -2821,9 +2836,11 @@ a.popup__barbershop-button {
   .vkontakte-post {
     width: 100%;
     aspect-ratio: 1;
+    height: unset;
   }
   .vkontakte-image {
     width: inherit;
+    height: inherit;
     object-fit: cover;
   }
   .youtube {

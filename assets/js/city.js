@@ -315,6 +315,8 @@ $(document).ready(function () {
     articlesSlider.classList.add("articles-slider");
     const youtubeSlider = document.querySelector(".youtube-videos");
     youtubeSlider.classList.add("youtube-slider");
+    const vkontakteSlider = document.querySelector(".vkontakte-posts");
+    vkontakteSlider.classList.add("vkontakte-slider");
   }
 
   $(".articles-slider").slick({
@@ -333,6 +335,22 @@ $(document).ready(function () {
   });
 
   $(".youtube-slider").slick({
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+    centerMode: true,
+    arrows: false,
+  });
+
+  $(".vkontakte-slider").slick({
     arrows: false,
     dots: false,
     adaptiveHeight: true,
