@@ -3034,10 +3034,19 @@ a.popup__barbershop-button {
   .header:not(.fit) .header-menu.test .header-logo__link {
     width: 80px;
     height: unset;
+    margin-top: 0;
   }
 
   .header-menu.test .menu-phone {
     width: unset;
+  }
+
+  .main {
+    margin-top: 140px;
+  }
+
+  .header:not(.fit) .header-menu.test {
+    padding-top: 14px;
   }
 
   .header-menu.test .menu-phone .menu__list-number {
