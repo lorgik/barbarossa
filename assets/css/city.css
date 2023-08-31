@@ -3031,13 +3031,13 @@ a.popup__barbershop-button {
   .popup__barbershop {
     top: 20px;
   }
-  .header:not(.fit) .header-menu.test .header-logo__link {
+  .header:not(.fit) .header-menu .header-logo__link {
     width: 80px;
     height: unset;
     margin-top: 0;
   }
 
-  .header-menu.test .menu-phone {
+  .header-menu .menu-phone {
     width: unset;
   }
 
@@ -3045,18 +3045,18 @@ a.popup__barbershop-button {
     margin-top: 140px;
   }
 
-  .header:not(.fit) .header-menu.test {
+  .header:not(.fit) .header-menu {
     padding-top: 14px;
   }
 
-  .header-menu.test .menu-phone .menu__list-number {
+  .header-menu .menu-phone .menu__list-number {
     display: block;
     font-size: 1.5rem;
     text-decoration: underline;
     text-decoration-style: dashed;
   }
 
-  .header-menu.test .menu-phone img {
+  .header-menu .menu-phone img {
     display: none;
   }
 }
