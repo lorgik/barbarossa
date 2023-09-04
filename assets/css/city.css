@@ -3131,13 +3131,14 @@ a.popup__barbershop-button {
     display: none;
   }
   .questions-card {
-    padding: 30px 25px;
+    padding: 35px 30px;
   }
   .questions-card__title {
     font-size: 2rem;
   }
   .questions-card__text {
     font-size: 1.375rem;
+    max-height: 40px;
   }
 }
 
