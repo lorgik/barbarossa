@@ -480,8 +480,6 @@ menuBtn.addEventListener("click", function () {
 
 const questionsCards = document.querySelectorAll(".questions-card");
 
-console.log(questionsCards[0].children[2]);
-
 questionsCards.forEach((card) => {
   const cardBtn = card.children[2];
   const cardText = card.children[1];
