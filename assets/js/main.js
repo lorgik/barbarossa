@@ -404,19 +404,3 @@ menuBtn.addEventListener("click", function () {
     timer = setTimeout(() => (timer = clearTimeout(timer)), 400);
   }
 });
-
-const questionsCards = document.querySelectorAll(".questions-card");
-
-questionsCards.forEach((card) => {
-  const cardBtn = card.children[2];
-  const cardText = card.children[1];
-  cardBtn.addEventListener("click", (e) => {
-    if (cardText.classList.contains("opened")) {
-      cardText.classList.remove("opened");
-      cardBtn.innerHTML = "Читать далее";
-    } else {
-      cardText.classList.add("opened");
-      cardBtn.innerHTML = "Свернуть";
-    }
-  });
-});
