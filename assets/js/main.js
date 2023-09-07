@@ -2,100 +2,102 @@ const slides = document.querySelectorAll(".gallery-link");
 const arrowLeft = document.querySelector("#arrow-left");
 const arrowRight = document.querySelector("#arrow-right");
 
-const slider = Array.from(slides);
+if (slides.length) {
+  const slider = Array.from(slides);
 
-const progressBar = document.querySelector("#progress-bar");
-const progressBarFill = document.querySelector("#progress-bar--fill");
+  const progressBar = document.querySelector("#progress-bar");
+  const progressBarFill = document.querySelector("#progress-bar--fill");
 
-const initialBar = progressBar.offsetWidth / slider.length;
+  const initialBar = progressBar.offsetWidth / slider.length;
 
-const slideWidth = slider[0].offsetWidth;
-const sliderGap = 24;
-const scrollDisctance = slideWidth + sliderGap;
-let currentMarginLeft = 0;
-let scrolls = 0;
+  const slideWidth = slider[0].offsetWidth;
+  const sliderGap = 24;
+  const scrollDisctance = slideWidth + sliderGap;
+  let currentMarginLeft = 0;
+  let scrolls = 0;
 
-drawBar();
+  drawBar();
 
-function scrollLeft(e) {
-  e.preventDefault();
+  function scrollLeft(e) {
+    e.preventDefault();
 
-  if (scrolls !== 0) {
-    slider[0].style.marginLeft = currentMarginLeft + scrollDisctance + "px";
-    currentMarginLeft += scrollDisctance;
-    scrolls--;
-    drawBar();
-  } else {
-    currentMarginLeft = -scrollDisctance * (slider.length - 1);
-    slider[0].style.marginLeft = currentMarginLeft + "px";
-    scrolls = slider.length - 1;
-    drawBar();
+    if (scrolls !== 0) {
+      slider[0].style.marginLeft = currentMarginLeft + scrollDisctance + "px";
+      currentMarginLeft += scrollDisctance;
+      scrolls--;
+      drawBar();
+    } else {
+      currentMarginLeft = -scrollDisctance * (slider.length - 1);
+      slider[0].style.marginLeft = currentMarginLeft + "px";
+      scrolls = slider.length - 1;
+      drawBar();
+    }
   }
-}
 
-function scrollRight(e) {
-  e.preventDefault();
+  function scrollRight(e) {
+    e.preventDefault();
 
-  if (scrolls < slider.length - 1) {
-    slider[0].style.marginLeft = currentMarginLeft - scrollDisctance + "px";
-    currentMarginLeft -= scrollDisctance;
-    scrolls++;
-    progressBarFill.style.width = progressBar.offsetWidth / slider.length;
-    drawBar();
-  } else {
-    currentMarginLeft = 0;
-    slider[0].style.marginLeft = currentMarginLeft;
-    scrolls = 0;
-    drawBar();
+    if (scrolls < slider.length - 1) {
+      slider[0].style.marginLeft = currentMarginLeft - scrollDisctance + "px";
+      currentMarginLeft -= scrollDisctance;
+      scrolls++;
+      progressBarFill.style.width = progressBar.offsetWidth / slider.length;
+      drawBar();
+    } else {
+      currentMarginLeft = 0;
+      slider[0].style.marginLeft = currentMarginLeft;
+      scrolls = 0;
+      drawBar();
+    }
   }
-}
 
-function drawBar() {
-  progressBarFill.style.width = (scrolls + 1) * initialBar + "px";
-}
+  function drawBar() {
+    progressBarFill.style.width = (scrolls + 1) * initialBar + "px";
+  }
 
-arrowLeft.addEventListener("click", scrollLeft);
-arrowRight.addEventListener("click", scrollRight);
+  arrowLeft.addEventListener("click", scrollLeft);
+  arrowRight.addEventListener("click", scrollRight);
 
-const popupImage = document.querySelector(".gallery-image");
-const popupArrowLeft = document.querySelector("#popup-arrow__left");
-const popupArrowRight = document.querySelector("#popup-arrow__right");
+  const popupImage = document.querySelector(".gallery-image");
+  const popupArrowLeft = document.querySelector("#popup-arrow__left");
+  const popupArrowRight = document.querySelector("#popup-arrow__right");
 
-const sliderSrc = [];
-let imageIndex = 0;
+  const sliderSrc = [];
+  let imageIndex = 0;
 
-slider.forEach((slide, index) => {
-  slide.addEventListener("click", function () {
-    popupImage.src = slide.children[0].getAttribute("src");
-    imageIndex = index;
+  slider.forEach((slide, index) => {
+    slide.addEventListener("click", function () {
+      popupImage.src = slide.children[0].getAttribute("src");
+      imageIndex = index;
+    });
+    sliderSrc.push(slide.children[0].getAttribute("src"));
   });
-  sliderSrc.push(slide.children[0].getAttribute("src"));
-});
 
-popupArrowLeft.addEventListener("click", scrollImageLeft);
-popupArrowRight.addEventListener("click", scrollImageRight);
+  popupArrowLeft.addEventListener("click", scrollImageLeft);
+  popupArrowRight.addEventListener("click", scrollImageRight);
 
-function scrollImageLeft(e) {
-  e.preventDefault();
+  function scrollImageLeft(e) {
+    e.preventDefault();
 
-  if (imageIndex > 0) {
-    popupImage.src = sliderSrc[imageIndex - 1];
-    imageIndex--;
-  } else {
-    popupImage.src = sliderSrc[sliderSrc.length - 1];
-    imageIndex = sliderSrc.length - 1;
+    if (imageIndex > 0) {
+      popupImage.src = sliderSrc[imageIndex - 1];
+      imageIndex--;
+    } else {
+      popupImage.src = sliderSrc[sliderSrc.length - 1];
+      imageIndex = sliderSrc.length - 1;
+    }
   }
-}
 
-function scrollImageRight(e) {
-  e.preventDefault();
+  function scrollImageRight(e) {
+    e.preventDefault();
 
-  if (imageIndex < sliderSrc.length - 1) {
-    popupImage.src = sliderSrc[imageIndex + 1];
-    imageIndex++;
-  } else {
-    popupImage.src = sliderSrc[0];
-    imageIndex = 0;
+    if (imageIndex < sliderSrc.length - 1) {
+      popupImage.src = sliderSrc[imageIndex + 1];
+      imageIndex++;
+    } else {
+      popupImage.src = sliderSrc[0];
+      imageIndex = 0;
+    }
   }
 }
 
@@ -302,19 +304,18 @@ $(document).ready(function () {
           slidesToShow: 1,
           centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
           slidesToScroll: 1,
-          autoplaySpeed: 3000,
-          arrows: false,
+          autoplaySpeed: 5000,
         },
+        arrows: false,
       },
     ],
   });
 
   let windowInnerWidth = document.documentElement.clientWidth;
   if (windowInnerWidth <= 576) {
-    const articlesSlider = document.querySelector(".articles-box");
-    articlesSlider.classList.add("articles-slider");
-    const youtubeSlider = document.querySelector(".youtube-videos");
-    youtubeSlider.classList.add("youtube-slider");
+    $(".articles-box").addClass("articles-slider");
+    $(".youtube-videos").addClass("youtube-slider");
+    $(".vkontakte-posts").addClass("vkontakte-slider");
   }
 
   $(".articles-slider").slick({
@@ -330,8 +331,8 @@ $(document).ready(function () {
     draggable: false,
     swipe: true,
     centerMode: true,
-    arrows: false,
   });
+
   $(".youtube-slider").slick({
     arrows: false,
     dots: false,
@@ -346,6 +347,77 @@ $(document).ready(function () {
     swipe: true,
     centerMode: true,
     arrows: false,
+  });
+
+  $(".vkontakte-slider").slick({
+    arrows: false,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 1,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+    centerMode: true,
+    arrows: false,
+  });
+});
+
+$(document).ready(function () {
+  $(".promotions-slider").slick({
+    arrows: true,
+    dots: false,
+    adaptiveHeight: true,
+    slidesToShow: 3,
+    speed: 400,
+    easing: "ease-in-out",
+    infinite: true,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    draggable: false,
+    swipe: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          centerMode: false /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true /* set centerMode to false to show complete slide instead of 3 */,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+          arrows: false,
+        },
+      },
+    ],
   });
 });
 
@@ -402,5 +474,78 @@ menuBtn.addEventListener("click", function () {
     menuBtn.classList.toggle("active");
     page.classList.toggle("overflow-hidden");
     timer = setTimeout(() => (timer = clearTimeout(timer)), 400);
+  }
+});
+
+const questionsCards = document.querySelectorAll(".questions-card");
+
+if (questionsCards) {
+  questionsCards.forEach((card) => {
+    const cardBtn = card.children[2];
+    const cardText = card.children[1];
+    cardBtn.addEventListener("click", (e) => {
+      if (cardText.classList.contains("opened")) {
+        cardText.classList.remove("opened");
+        cardBtn.innerHTML = "Читать далее";
+      } else {
+        cardText.classList.add("opened");
+        cardBtn.innerHTML = "Свернуть";
+      }
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabsLinks = Array.from(document.querySelectorAll(".tabs__list-link"));
+  if (tabsLinks.length > 0) {
+    tabsLinks[0].classList.add("active");
+
+    let currentHash = tabsLinks[0].dataset.hash;
+
+    tabsLinks.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        if (currentHash !== tab.dataset.hash) {
+          tabsLinks.forEach(function (tab) {
+            tab.classList.remove("active");
+          });
+
+          currentHash = tab.dataset.hash;
+          tab.classList.add("active");
+        }
+
+        showArticles();
+      });
+    });
+
+    const arcticlesCard = Array.from(document.querySelectorAll(".arcticles-card"));
+
+    function showArticles() {
+      arcticlesCard.forEach(function (card) {
+        if (card.classList.contains("visible")) {
+          card.classList.remove("visible");
+        }
+        if (card.dataset.hashCard === currentHash || currentHash === "#все") {
+          card.classList.add("visible");
+        }
+        if (card.classList.contains("big-card")) {
+          card.classList.remove("big-card");
+        }
+      });
+
+      const visibleArticlesCards = Array.from(document.querySelectorAll(".arcticles-card.visible"));
+
+      for (let i = 0; i < visibleArticlesCards.length / 9; i++) {
+        if (visibleArticlesCards[0 + i * 9]) {
+          visibleArticlesCards[0 + i * 9].classList.add("big-card");
+        }
+        if (visibleArticlesCards[4 + i * 9]) {
+          visibleArticlesCards[4 + i * 9].classList.add("big-card");
+        }
+        if (visibleArticlesCards[8 + i * 9]) {
+          visibleArticlesCards[8 + i * 9].classList.add("big-card");
+        }
+      }
+    }
+    showArticles();
   }
 });
