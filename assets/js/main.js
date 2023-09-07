@@ -444,8 +444,11 @@ window.addEventListener("scroll", function () {
 });
 
 const articlesCards = document.querySelectorAll(".arcticles-card");
-articlesCards[0].classList.add("big-card");
-articlesCards[4].classList.add("big-card");
+
+if (articlesCards.length > 3) {
+  articlesCards[0].classList.add("big-card");
+  articlesCards[4].classList.add("big-card");
+}
 
 let windowInnerWidth = document.documentElement.clientWidth;
 

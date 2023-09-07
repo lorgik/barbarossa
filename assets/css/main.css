@@ -3848,7 +3848,8 @@ a.popup__barbershop-button {
     right: -5px;
     left: unset;
   }
-  .page-city-big .main-video {
+  .page-city-big .main-video,
+  .page-city .main-video {
     top: 220px;
   }
   .white-bg {
