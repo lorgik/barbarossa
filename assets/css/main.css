@@ -3738,10 +3738,9 @@ a.popup__barbershop-button {
     object-position: -300px;
     object-fit: none;
   }
-  .page-article .main,
   .page-article .main {
     border-radius: 60px 60px 0 0;
-    margin-bottom: 100px;
+    z-index: -1;
   }
   .page-article .main-container {
     top: -249px;
