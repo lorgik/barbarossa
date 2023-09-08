@@ -3674,6 +3674,9 @@ a.popup__barbershop-button {
   .header .menu__list:not(.active) {
     width: 56px;
   }
+  .page-city .menu__list:not(.active) {
+    width: 0;
+  }
   .header .header-button {
     transition: none;
   }
@@ -3683,6 +3686,7 @@ a.popup__barbershop-button {
   .header-logo__link.active {
     visibility: hidden;
   }
+
   .page-privacy .title {
     font-size: 2.5rem;
   }
@@ -3709,12 +3713,16 @@ a.popup__barbershop-button {
   .page-contacts .contacts-top__links {
     width: unset;
   }
-  .page-city .header:not(.fit) .header-menu .header-logo__link {
+  .page-city.header:not(.fit) .header-menu .header-logo__link {
     width: 80px;
     height: unset;
     margin-top: 0;
   }
-  .page-city .header:not(.fit) .header-menu {
+  .page-city .header-menu .header-logo__link {
+    margin-right: auto;
+    margin-left: 20px;
+  }
+  .page-city.header:not(.fit) .header-menu {
     padding-top: 14px;
   }
   .page-city .menu-phone {
@@ -3722,6 +3730,9 @@ a.popup__barbershop-button {
   }
   .page-city .menu-phone img {
     display: none;
+  }
+  .page-city.fit .menu__list:not(.active) {
+    width: 0;
   }
   .page-city .menu-phone .menu__list-number {
     display: block;

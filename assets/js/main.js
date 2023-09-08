@@ -551,4 +551,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     showArticles();
   }
+
+  const menuNumber = document.querySelector(".menu__list-number");
+
+  if (menuNumber && !menuNumber.textContent) {
+    menuNumber.parentNode.parentNode.style.display = "none";
+  }
 });
