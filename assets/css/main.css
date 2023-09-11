@@ -422,6 +422,7 @@ img {
   right: 0;
   background-color: #000;
   object-fit: cover;
+  object-position: top;
   width: inherit;
   aspect-ratio: 5.4 / 3.3;
 }
@@ -501,13 +502,13 @@ img {
   gap: 24px;
 }
 
-.page-article .articles-link {
+/* .page-article .articles-link {
   transition: transform 0.2s ease-in-out;
 }
 
 .page-article .articles-link:hover {
   transform: translate(0, -10px);
-}
+} */
 
 .page-article .arcticles-card {
   position: relative;
@@ -600,12 +601,12 @@ img {
   opacity: 0;
   display: none;
 
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
 }
 
-.page-articles .articles-link:hover {
+/* .page-articles .articles-link:hover {
   transform: translate(0, -10px);
-}
+} */
 
 .page-articles .articles-link.visible {
   display: inline-block;
@@ -640,7 +641,7 @@ img {
   gap: 24px;
 }
 
-.page-articles .articles-box {
+.page-articles .articles-box-1 {
   margin-top: 199px;
   background-color: var(--color-main-white);
   border-radius: 100px 100px 0 0;
@@ -685,7 +686,14 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
+  object-fit: cover;
   background-color: #000;
+  filter: grayscale(0.75);
+  transition: filter 0.2s ease-in-out;
+}
+
+.page-articles .articles-link:hover .articles-card__image {
+  filter: grayscale(0);
 }
 
 .page-articles .articles-card__date {
@@ -3604,6 +3612,9 @@ a.popup__barbershop-button {
   }
   .gallery {
     margin-top: 50px;
+    border-radius: 60px 60px 0 0;
+  }
+  .page-articles .articles-box-1 {
     border-radius: 60px 60px 0 0;
   }
   .gallery-title {
