@@ -2310,10 +2310,11 @@ img {
   padding: 10px 15px;
   width: inherit;
   border-radius: 7px;
+  transition: all 0.1s ease-in-out;
 }
 
 .routes-list__link:hover {
-  background-color: #dbdbdb;
+  background-color: #e0e0e0;
 }
 
 .footer {
