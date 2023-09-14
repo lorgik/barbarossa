@@ -1938,6 +1938,15 @@ img {
   max-width: 526px;
 }
 
+.articles-link:hover .articles-card__image {
+  transition: filter 0.2s ease-in-out;
+  filter: grayscale(0);
+}
+
+.articles-card__image {
+  filter: grayscale(0.75);
+}
+
 .articles-card__image,
 .news-card__image {
   z-index: -1;
@@ -1947,6 +1956,7 @@ img {
   bottom: 0;
   right: 0;
   background-color: #000;
+  object-fit: cover;
   width: inherit;
   height: inherit;
 }
@@ -3762,10 +3772,11 @@ a.popup__barbershop-button {
   }
   .page-article .main {
     border-radius: 60px 60px 0 0;
-    z-index: -1;
+    z-index: 0;
+    margin-top: 398px;
   }
   .page-article .main-container {
-    top: -249px;
+    top: -185px;
   }
 
   .page-article .main-card {
@@ -3774,6 +3785,14 @@ a.popup__barbershop-button {
   }
   .page-article .main-card__title {
     font-size: 2.5rem;
+    bottom: 30px;
+  }
+  .page-articles .articles-box-1 {
+    margin-top: 134px;
+  }
+
+  .page-articles .articles-container {
+    top: -100px;
   }
 
   .page-article .main-area {
