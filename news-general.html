@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2C2C2C" />
-    <title>Новость</title>
+    <title>Новости барбершопа BarbarossA</title>
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
@@ -67,74 +67,61 @@
         </nav>
       </header>
 
-      <div class="content page-article">
+      <div class="content page-articles">
         <img class="main-bg lock-padding" src="./assets/images/main-bg-2.jpg" alt="bgImage" />
         <main class="main">
-          <div class="container main-container">
+          <div class="container">
             <nav aria-label="Breadcrumb" class="breadcrumb">
               <ul>
                 <li><a href="./">Главная</a></li>
-                <li><a href="/news-general.html">Новости</a></li>
-                <li>
-                  <span aria-current="articles">BARBAROSSA С ЗАБОТОЙ О ВАШЕЙ БОРОДЕ!</span>
-                </li>
+                <li><span aria-current="articles">Новости</span></li>
               </ul>
             </nav>
-            <div class="main-card">
-              <img class="main-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="1296" height="369" />
-              <span class="main-card__date">03.09.2023</span>
-              <h3 class="main-card__title">BARBAROSSA С ЗАБОТОЙ О ВАШЕЙ БОРОДЕ!</h3>
+          </div>
+
+          <div class="main-articles">
+            <div class="container">
+              <div class="main-box">
+                <h1 class="main-title title">Новости</h1>
+                <nav class="articles-tabs">
+                  <ul class="tabs__list">
+                    <li class="tabs__list-item">
+                      <a class="tabs__list-link" data-hash="#все">#все</a>
+                    </li>
+                    <li class="tabs__list-item">
+                      <a class="tabs__list-link" data-hash="#стайлинги">#стайлинги</a>
+                    </li>
+                    <li class="tabs__list-item">
+                      <a class="tabs__list-link" data-hash="#барбершоп">#барбершоп</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
-            <div class="main-area">
-              <p>Модные тенденции порой меняются так, что мы не успеваем за ними следить. Но есть вещи, понимать которые следует каждому мужчине.</p>
-              <p>
-                Если вы хотите быть в тренде, то эта подборка для вас. А если наоборот, вы хотите быть «не как все», то эта подборка так же поможет вам в этом.
-              </p>
-              <p>Ну что, друзья, давайте разберемся, какие образы и стрижки буду актуальны в 2022 году.</p>
-              <h2>Бешеную популярность набирает стрижка K-Pop</h2>
-              <p>
-                Данная стрижка пришла к нам из корейской поп-культуры, она особенно актуальная для молодежи, для ребят с плотными, густыми волосами. Стрижка
-                отлично будет смотреться как на прямых, так и слегка волнистых волосах. Стрижка легкая в укладке, обладает чаще всего удлиненной челкой.
-              </p>
-              <img src="https://barbarossa.top/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/08/1-kpop.png.webp" alt="man" />
-            </div>
-            <a href="#" class="main-button button">Посмотреть на Youtube</a>
-            <div class="more">
-              <h2 class="more-title title">Может быть интересно</h2>
-              <div class="more-articles">
-                <a class="articles-link" href="#">
-                  <div class="arcticles-card big-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+
+            <div class="articles-box-1">
+              <div class="container articles-container">
+                <a href="./news.html" class="articles-link arcticles-card" data-hash-card="#стайлинги">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a class="articles-link" href="#">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
+                <a href="#" class="articles-link arcticles-card" data-hash-card="#барбершоп">
+                  <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
+                  <span class="articles-card__date">03.09.2023</span>
+                  <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
+                  <p class="articles-card__text">
+                    Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
+                    приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
+                  </p>
                 </a>
-                <a class="articles-link" href="#">
-                  <div class="arcticles-card">
-                    <img class="articles-card__image" src="./assets/images/articles-test/article-1.jpg" alt="article-bg" width="526" height="330" />
-                    <span class="articles-card__date">03.09.2023</span>
-                    <h3 class="articles-card__title">ТОП-10 ошибок клиента барбершопа</h3>
-                    <p class="articles-card__text">
-                      Мы расскажем о топ 10 ошибках, которые можно избежать при посещении любого барбершопа. Очень важно дочитать эту статью до конца, чтобы,
-                      приходя в барбершоп, вы могли по-настоящему отдохнуть, расслабиться и не заморачивались о том, что что-то нельзя или вы что-то не знаете.
-                    </p>
-                  </div>
-                </a>
+              </div>
+              <div class="container">
+                <button class="articles-button button">Еще</button>
               </div>
             </div>
           </div>
@@ -259,6 +246,6 @@
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./assets/js/slick.min.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script defer src="./assets/js/main.js"></script>
   </body>
 </html>
