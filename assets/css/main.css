@@ -2902,6 +2902,9 @@ a.popup__barbershop-button {
 .booking-icon {
   z-index: 50;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   right: 40px;
   bottom: 40px;
   width: 178px;
@@ -2913,6 +2916,16 @@ a.popup__barbershop-button {
   animation: pulse 3s ease-in-out infinite;
 }
 
+.booking-icon__circle {
+  width: 172px;
+  height: 172px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  animation: rotate 3s linear infinite;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -2922,6 +2935,16 @@ a.popup__barbershop-button {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -3361,8 +3384,9 @@ a.popup__barbershop-button {
   .services-box {
     display: none;
   }
-   
-  .arrow-down, .arrow-hole {
+
+  .arrow-down,
+  .arrow-hole {
     display: none;
   }
   .black-bg {
@@ -3459,6 +3483,9 @@ a.popup__barbershop-button {
   .booking-icon {
     width: 125px;
     height: 125px;
+  }
+  .booking-icon__circle {
+    width: 120px;
   }
   .show-map-icon {
     width: 70px;
