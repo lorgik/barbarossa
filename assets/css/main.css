@@ -2923,7 +2923,7 @@ a.popup__barbershop-button {
   background-size: contain;
   background-position: center;
 
-  animation: rotate 3s linear infinite;
+  animation: rotate 2s linear infinite;
 }
 
 @keyframes pulse {
